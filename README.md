@@ -5,24 +5,25 @@ NOTE :- This is english traslation version of the huihut/interview. All the cred
 * [➕ C/C++](#-cc)
 * [⭐️ Effective](#-effective)
 * [📦 STL](#-stl)
-* [〽️ Data Structure](#-Data Structure)
+* [〽️ Data structure](#-DataStructure)
 * [⚡️ Algorithm](#-Algorithm)
 * [❓ Problems](#-problems)
-* [💻 Operating System](#-operating system)
-* [☁️ Computer Network](#-Computer Network)
-* [☁️ Network Programming](#-Network Programming)
+* [💻 Operating system](#-operatingsystem)
+* [☁️ Computer network](#-ComputerNetwork)
+* [☁️ Network programming](#-NetworkProgramming)
 * [💾 Database](#-Database)
-* [📏 Design Mode](#-Design Mode)
-* [⚙️ Link loading library](#-Link loading library)
+* [💾 Design attern](#-DesignPattern)
+* [📏 Design Mode](#-DesignMode)
+* [⚙️ Link loading library](#-Linkloadinglibrary)
 * [📚 Books](#-books)
-* [🔱 C / C ++ development direction](#-cc-development direction)
-* [💯 Review brush questions website](#-review brush questions website)
-* [📝 Interview Question](#-Interview Question)
-* [👍 Inner Push](#-Inner Push)
-* [🍭 Contributor](#-Contributor)
+* [🔱 C/C++ development guideline](#-cc-developmentdirection)
+* [💯 Coding website](#-reviewbrushquestionswebsite)
+* [📝 Interview question](#-InterviewQuestion)
+* [👍 InnerPush](#-InnerPush)
+* [🍭 Contributors](#-Contributors)
 * [📜 License](#-license)
 
-## ➕ C / C ++
+## ➕ C/C++
 
 ### const
 
@@ -3174,7 +3175,7 @@ contain:
 
 * "Self-cultivation of programmers"
 
-## � C / C ++ development direction
+## � C/C++ development guideline
 
 > The development direction of C / C ++ is very broad, including but not limited to the following directions. Here are some requirements for recruiting positions in large factories.
 
@@ -3260,7 +3261,7 @@ contain:
 * Strong algorithm implementation ability, proficient in C / C ++ programming, familiar with Shell / Python / Matlab at least one programming language;
 * Papers published in academic conferences or journals such as computer vision, pattern recognition, related international competition awards, and related patents are preferred.
 
-## � Review brush question website
+## � Coding website
 
 * [cplusplus](http://www.cplusplus.com/)
 * [cppreference](https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5)
