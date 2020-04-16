@@ -2,25 +2,25 @@ NOTE :- This is english traslation version of the huihut/interview. All the cred
 
 ## � Index
 
-* [➕ C / C ++] (#-cc)
-* [⭐️ Effective] (#-effective)
-* [� STL] (#-stl)
-* [〽️ Data Structure] (#-Data Structure)
-* [⚡️ Algorithm] (#-Algorithm)
-* [❓ Problems] (#-problems)
-* [� Operating System] (#-operating system)
-* [☁️ Computer Network] (#-Computer Network)
-* [� Network Programming] (#-Network Programming)
-* [� Database] (#-Database)
-* [� Design Mode] (#-Design Mode)
-* [⚙️ Link loading library] (#-Link loading library)
-* [� Books] (#-books)
-* [� C / C ++ development direction] (#-cc-development direction)
-* [� Review brush questions website] (#-review brush questions website)
-* [� Interview Question] (#-Interview Question)
-* [� Inner Push] (#-Inner Push)
-* [� Contributor] (#-Contributor)
-* [� License] (#-license)
+* [➕ C/C++](#-cc)
+* [⭐️ Effective](#-effective)
+* [📦 STL](#-stl)
+* [〽️ Data Structure](#-Data Structure)
+* [⚡️ Algorithm](#-Algorithm)
+* [❓ Problems](#-problems)
+* [💻 Operating System](#-operating system)
+* [☁️ Computer Network](#-Computer Network)
+* [☁️ Network Programming](#-Network Programming)
+* [💾 Database](#-Database)
+* [📏 Design Mode](#-Design Mode)
+* [⚙️ Link loading library](#-Link loading library)
+* [📚 Books](#-books)
+* [🔱 C / C ++ development direction](#-cc-development direction)
+* [💯 Review brush questions website](#-review brush questions website)
+* [📝 Interview Question](#-Interview Question)
+* [👍 Inner Push](#-Inner Push)
+* [🍭 Contributor](#-Contributor)
+* [📜 License](#-license)
 
 ## ➕ C / C ++
 
@@ -174,7 +174,7 @@ Disadvantages
 
 #### Can a virtual function be an inline function?
 
-> [Are "inline virtual" member functions ever actually "inlined"?] (Http://www.cs.technion.ac.il/users/yechiel/c++-faq/inline-virtuals.html)
+> [Are "inline virtual" member functions ever actually "inlined"?](Http://www.cs.technion.ac.il/users/yechiel/c++-faq/inline-virtuals.html)
 
 * A virtual function can be an inline function. Inline can modify a virtual function, but it cannot be inlined when the virtual function exhibits polymorphism.
 * Inlining is recommended by the compiler when the compiler is inline, and the polymorphism of the virtual function is at runtime. The compiler cannot know which code is called at runtime. Therefore, when the virtual function is polymorphic (runtime), it cannot be inlined. .
@@ -431,12 +431,12 @@ C implements the object-oriented features of C ++ (encapsulation, inheritance, p
 * Inheritance: structure nesting
 * Polymorphism: the function pointers of the parent and child methods are different
 
-> [Can you write object-oriented code in C? [Closed]] (https://stackoverflow.com/a/351745)
+> [Can you write object-oriented code in C? [Closed]](https://stackoverflow.com/a/351745)
 
 ### explicit (explicit) keywords
 
 * Explicit modification of the constructor can prevent implicit conversion and copy initialization
-* When explicit conversion function is modified, implicit conversion can be prevented, except [Conversion by Context] (https://zh.cppreference.com/w/cpp/language/implicit_conversion)
+* When explicit conversion function is modified, implicit conversion can be prevented, except [Conversion by Context](https://zh.cppreference.com/w/cpp/language/implicit_conversion)
 
 explicit use
 
@@ -733,7 +733,7 @@ int main ()
 
 Object-oriented programming (OOP) is a paradigm of programming with object concepts, and it is also an abstract policy for program development.
 
-![Object Oriented Features] (https://raw.githubusercontent.com/mihir3445/interview/master/images/Basic Object Oriented Features.png)
+![Object Oriented Features](https://raw.githubusercontent.com/mihir3445/interview/master/images/Basic Object Oriented Features.png)
 
 Three characteristics of object-oriented-encapsulation, inheritance, polymorphism
 
@@ -783,7 +783,7 @@ public:
 * Ordinary functions (non-class member functions) cannot be virtual functions
 * Static functions (static) cannot be virtual functions
 * The constructor cannot be a virtual function (because when calling the constructor, the virtual table pointer is not in the memory space of the object, the virtual table pointer must be formed after the constructor call is completed)
-* The inline function cannot be a virtual function when expressing polymorphism. For explanation, see: [Can a virtual function (virtual) be an inline function (inline)? ] (https://github.com/mihir3445/interview#%E8%99%9A%E5%87%BD%E6%95%B0virtual%E5%8F%AF%E4%BB%A5%E6%98%AF % E5% 86% 85% E8% 81% 94% E5% 87% BD% E6% 95% B0inline% E5% 90% 97)
+* The inline function cannot be a virtual function when expressing polymorphism. For explanation, see: [Can a virtual function (virtual) be an inline function (inline)? ](https://github.com/mihir3445/interview#%E8%99%9A%E5%87%BD%E6%95%B0virtual%E5%8F%AF%E4%BB%A5%E6%98%AF % E5% 86% 85% E8% 81% 94% E5% 87% BD% E6% 95% B0inline% E5% 90% 97)
 
 Dynamic polymorphism usage
 
@@ -869,14 +869,14 @@ virtual int A () = 0;
 * Classes with pure virtual functions are called abstract classes. Such classes cannot directly generate objects, but can only be used after they are inherited and their virtual functions are rewritten. After the abstract class is inherited, the subclass can continue to be an abstract class or an ordinary class.
 * Virtual base class is the base class in virtual inheritance, see virtual inheritance below for details.
 
-> [Difference and connection between virtual functions and pure virtual functions in CSDN. C ++] (https://blog.csdn.net/u012260238/article/details/53610462)
+> [Difference and connection between virtual functions and pure virtual functions in CSDN. C ++](https://blog.csdn.net/u012260238/article/details/53610462)
 
 ### Virtual function pointer, virtual function table
 
 * Virtual function pointer: In an object containing a virtual function class, it points to the virtual function table and is determined at runtime.
-* Virtual function table: In the program read-only data section (`.rodata section`, see: [Target File Storage Structure] (#% E7% 9B% AE% E6% A0% 87% E6% 96% 87% E4% BB % B6% E5% AD% 98% E5% 82% A8% E7% BB% 93% E6% 9E% 84)), store the virtual function pointer, if the derived class implements a virtual function of the base class, then in the virtual The virtual function pointer covering the original base class in the table is created according to the class declaration at compile time.
+* Virtual function table: In the program read-only data section (`.rodata section`, see: [Target File Storage Structure](#% E7% 9B% AE% E6% A0% 87% E6% 96% 87% E4% BB % B6% E5% AD% 98% E5% 82% A8% E7% BB% 93% E6% 9E% 84)), store the virtual function pointer, if the derived class implements a virtual function of the base class, then in the virtual The virtual function pointer covering the original base class in the table is created according to the class declaration at compile time.
 
-> [Virtual function (table) implementation mechanism in C ++ and its simulation implementation in C language] (https://blog.twofei.com/496/)
+> [Virtual function (table) implementation mechanism in C ++ and its simulation implementation in C language](https://blog.twofei.com/496/)
 
 ### Virtual inheritance
 
@@ -976,7 +976,7 @@ new (place_address) type [size] {braced initializer list}
 
 ### delete this Is it legal?
 
-> [Is it legal (and moral) for a member function to say delete this?] (Https://isocpp.org/wiki/faq/freestore-mgmt#delete-this)
+> [Is it legal (and moral) for a member function to say delete this?](Https://isocpp.org/wiki/faq/freestore-mgmt#delete-this)
 
 Legal, but:
 
@@ -987,7 +987,7 @@ Legal, but:
 
 ### How to define a class that can only generate objects on the heap (stack)?
 
-> [How to define a class that can only generate objects on the heap (stack)?] (Https://www.nowcoder.com/questionTerminal/0a584aa13f804f3ea72b442a065a7618)
+> [How to define a class that can only generate objects on the heap (stack)?](Https://www.nowcoder.com/questionTerminal/0a584aa13f804f3ea72b442a065a7618)
 
 #### Only on the heap
 
@@ -1052,7 +1052,7 @@ Deprecated by c ++ 11 due to lack of language features such as "std :: move" sem
 
 ### Mandatory type conversion operator
 
-> [MSDN. Cast operator] (https://msdn.microsoft.com/zh-CN/library/5f6c9f8h.aspx)
+> [MSDN. Cast operator](https://msdn.microsoft.com/zh-CN/library/5f6c9f8h.aspx)
 
 #### static_cast
 
@@ -1264,47 +1264,47 @@ return 0;
 
 ### Google C ++ Style Guide
 
-* English: [Google C ++ Style Guide] (https://google.github.io/styleguide/cppguide.html)
-* Chinese: [C ++ Style Guide] (https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/contents/)
+* English: [Google C ++ Style Guide](https://google.github.io/styleguide/cppguide.html)
+* Chinese: [C ++ Style Guide](https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/contents/)
 
 ### Other
 
-* [FAQ of Bjarne Stroustrup] (http://www.stroustrup.com/bs_faq.html)
-* [Bjarne Stroustrup's C ++ style and tips FAQ] (http://www.stroustrup.com/bs_faq2.html)
+* [FAQ of Bjarne Stroustrup](http://www.stroustrup.com/bs_faq.html)
+* [Bjarne Stroustrup's C ++ style and tips FAQ](http://www.stroustrup.com/bs_faq2.html)
 
 ## � STL
 
 ### STL index
 
-[STL Method Meaning Index] (https://github.com/mihir3445/interview/tree/master/STL)
+[STL Method Meaning Index](https://github.com/mihir3445/interview/tree/master/STL)
 
 ### STL container
 
 Container | Underlying data structure | Time complexity | Orderless | Non-repeatable | Other
 --- | --- | --- | --- | --- | ---
-[array] (https://github.com/mihir3445/interview/tree/master/STL#array) | array | random read change O (1) | unordered | repeatable | support random access
-[vector] (https://github.com/mihir3445/interview/tree/master/STL#vector) | array | random read modification, tail insertion, tail deletion O (1) <br/> head insertion, head Delete O (n) | Unordered | Repeatable | Support random access
-[deque] (https://github.com/mihir3445/interview/tree/master/STL#deque) | Double-ended queue | Head-to-tail insertion, head-to-tail deletion O (1) | Unordered | Repeatable | One central control + Multiple buffers, support fast addition and deletion at the beginning and end, support random access
-[forward_list] (https://github.com/mihir3445/interview/tree/master/STL#forward_list) | Single linked list | insert, delete O (1) | unordered | repeatable | random access is not supported
-[list] (https://github.com/mihir3445/interview/tree/master/STL#list) | Doubly linked list | Insert, delete O (1) | Unordered | Repeatable | Random access is not supported
-[stack] (https://github.com/mihir3445/interview/tree/master/STL#stack) | deque / list | top insert, top delete O (1) | unordered | repeatable | deque or list closed head Open end, the reason for not using vector should be limited capacity size, time-consuming expansion
-[queue] (https://github.com/mihir3445/interview/tree/master/STL#queue) | deque / list | tail insertion, head deletion O (1) | unordered | repeatable | deque or list closed The head end is open, the reason for not using the vector should be that the capacity is limited, and the expansion takes time
-[priority_queue] (https://github.com/mihir3445/interview/tree/master/STL#priority_queue) | vector + max-heap | Insert, delete O (log <sub> 2 </sub> n) | Ordered | Repeatable | vector container + heap processing rules
-[set] (https://github.com/mihir3445/interview/tree/master/STL#set) | Red Black Tree | Insert, Delete, Find O (log <sub> 2 </sub> n) | Ordered | Not repeatable |
-[multiset] (https://github.com/mihir3445/interview/tree/master/STL#multiset) | Red Black Tree | Insert, Delete, Find O (log <sub> 2 </sub> n) | Ordered | Repeatable |
-[map] (https://github.com/mihir3445/interview/tree/master/STL#map) | Red Black Tree | Insert, Delete, Find O (log <sub> 2 </sub> n) | Ordered | Not repeatable |
-[multimap] (https://github.com/mihir3445/interview/tree/master/STL#multimap) | Red Black Tree | Insert, Delete, Find O (log <sub> 2 </sub> n) | Ordered | Repeatable |
-[unordered_set] (https://github.com/mihir3445/interview/tree/master/STL#unordered_set) | Hash Table | Insert, Delete, Find O (1) Worst O (n) | Unordered | Not Repeatable |
-[unordered_multiset] (https://github.com/mihir3445/interview/tree/master/STL#unordered_multiset) | Hash table | insert, delete, find O (1) worst O (n) | unordered | repeatable |
-[unordered_map] (https://github.com/mihir3445/interview/tree/master/STL#unordered_map) | Hash Table | Insert, Delete, Find O (1) Worst O (n) | Unordered | Not Repeatable |
-[unordered_multimap] (https://github.com/mihir3445/interview/tree/master/STL#unordered_multimap) | Hash Table | Insert, Delete, Find O (1) Worst O (n) | Unordered | Repeatable |
+[array](https://github.com/mihir3445/interview/tree/master/STL#array) | array | random read change O (1) | unordered | repeatable | support random access
+[vector](https://github.com/mihir3445/interview/tree/master/STL#vector) | array | random read modification, tail insertion, tail deletion O (1) <br/> head insertion, head Delete O (n) | Unordered | Repeatable | Support random access
+[deque](https://github.com/mihir3445/interview/tree/master/STL#deque) | Double-ended queue | Head-to-tail insertion, head-to-tail deletion O (1) | Unordered | Repeatable | One central control + Multiple buffers, support fast addition and deletion at the beginning and end, support random access
+[forward_list](https://github.com/mihir3445/interview/tree/master/STL#forward_list) | Single linked list | insert, delete O (1) | unordered | repeatable | random access is not supported
+[list](https://github.com/mihir3445/interview/tree/master/STL#list) | Doubly linked list | Insert, delete O (1) | Unordered | Repeatable | Random access is not supported
+[stack](https://github.com/mihir3445/interview/tree/master/STL#stack) | deque / list | top insert, top delete O (1) | unordered | repeatable | deque or list closed head Open end, the reason for not using vector should be limited capacity size, time-consuming expansion
+[queue](https://github.com/mihir3445/interview/tree/master/STL#queue) | deque / list | tail insertion, head deletion O (1) | unordered | repeatable | deque or list closed The head end is open, the reason for not using the vector should be that the capacity is limited, and the expansion takes time
+[priority_queue](https://github.com/mihir3445/interview/tree/master/STL#priority_queue) | vector + max-heap | Insert, delete O (log <sub> 2 </sub> n) | Ordered | Repeatable | vector container + heap processing rules
+[set](https://github.com/mihir3445/interview/tree/master/STL#set) | Red Black Tree | Insert, Delete, Find O (log <sub> 2 </sub> n) | Ordered | Not repeatable |
+[multiset](https://github.com/mihir3445/interview/tree/master/STL#multiset) | Red Black Tree | Insert, Delete, Find O (log <sub> 2 </sub> n) | Ordered | Repeatable |
+[map](https://github.com/mihir3445/interview/tree/master/STL#map) | Red Black Tree | Insert, Delete, Find O (log <sub> 2 </sub> n) | Ordered | Not repeatable |
+[multimap](https://github.com/mihir3445/interview/tree/master/STL#multimap) | Red Black Tree | Insert, Delete, Find O (log <sub> 2 </sub> n) | Ordered | Repeatable |
+[unordered_set](https://github.com/mihir3445/interview/tree/master/STL#unordered_set) | Hash Table | Insert, Delete, Find O (1) Worst O (n) | Unordered | Not Repeatable |
+[unordered_multiset](https://github.com/mihir3445/interview/tree/master/STL#unordered_multiset) | Hash table | insert, delete, find O (1) worst O (n) | unordered | repeatable |
+[unordered_map](https://github.com/mihir3445/interview/tree/master/STL#unordered_map) | Hash Table | Insert, Delete, Find O (1) Worst O (n) | Unordered | Not Repeatable |
+[unordered_multimap](https://github.com/mihir3445/interview/tree/master/STL#unordered_multimap) | Hash Table | Insert, Delete, Find O (1) Worst O (n) | Unordered | Repeatable |
 
 ### STL algorithm
 
 Algorithm | Underlying Algorithm | Time Complexity | Non-Repeatable
 --- | --- | --- | ---
-[find] (http://www.cplusplus.com/reference/algorithm/find/) | Sequential search | O (n) | Repeatable
-[sort] (https://github.com/gcc-mirror/gcc/blob/master/libstdc++-v3/include/bits/stl_algo.h#L4808) | [introspective sorting] (https: //en.wikipedia .org / wiki / Introsort) | O (n * log <sub> 2 </sub> n) | Repeatable
+[find](http://www.cplusplus.com/reference/algorithm/find/) | Sequential search | O (n) | Repeatable
+[sort](https://github.com/gcc-mirror/gcc/blob/master/libstdc++-v3/include/bits/stl_algo.h#L4808) | [introspective sorting](https: //en.wikipedia .org / wiki / Introsort) | O (n * log <sub> 2 </sub> n) | Repeatable
 
 ## 〽️ Data structure
 
@@ -1312,7 +1312,7 @@ Algorithm | Underlying Algorithm | Time Complexity | Non-Repeatable
 
 #### Sequence Stack (Sequence Stack)
 
-[SqStack.cpp] (DataStructure / SqStack.cpp)
+[SqStack.cpp](DataStructure / SqStack.cpp)
 
 Sequential stack data structure and pictures
 
@@ -1358,7 +1358,7 @@ Circular queue picture
 
 #### Sequence List (Sequence List)
 
-[SqList.cpp] (DataStructure / SqList.cpp)
+[SqList.cpp](DataStructure / SqList.cpp)
 
 Sequence table data structure and pictures
 
@@ -1376,9 +1376,9 @@ int increment;
 
 ### Chain structure
 
-[LinkList.cpp] (DataStructure / LinkList.cpp)
+[LinkList.cpp](DataStructure / LinkList.cpp)
 
-[LinkList_with_head.cpp] (DataStructure / LinkList_with_head.cpp)
+[LinkList_with_head.cpp](DataStructure / LinkList_with_head.cpp)
 
 Chained data structure
 
@@ -1417,7 +1417,7 @@ Picture of a circular list
 
 ### Hash table
 
-[HashTable.cpp] (DataStructure / HashTable.cpp)
+[HashTable.cpp](DataStructure / HashTable.cpp)
 
 #### Concept
 
@@ -1533,7 +1533,7 @@ typedef struct GLNode1 {
 
 ### Binary tree
 
-[BinaryTree.cpp] (DataStructure / BinaryTree.cpp)
+[BinaryTree.cpp](DataStructure / BinaryTree.cpp)
 
 #### Nature
 
@@ -1628,7 +1628,7 @@ Adjustment:
 
 #### Red Black Tree
 
-[RedBlackTree.cpp] (DataStructure / RedBlackTree.cpp)
+[RedBlackTree.cpp](DataStructure / RedBlackTree.cpp)
 
 ##### What are the characteristics of the red-black tree?
 
@@ -1657,7 +1657,7 @@ Adjustment:
 
 B tree, B + tree pictures
 
-![B tree (B-tree), B + tree (B + -tree)] (https://i.stack.imgur.com/l6UyF.png)
+![B tree (B-tree), B + tree (B + -tree)](https://i.stack.imgur.com/l6UyF.png)
 
 ##### Features
 
@@ -1682,7 +1682,7 @@ The data of the internal nodes can be obtained directly, without having to locat
 * Non-leaf nodes will not bring ROWID, so that a block can accommodate more index items, one can reduce the height of the tree. Second, an internal node can locate more leaf nodes.
 * The leaf nodes are connected by pointers, the range scan will be very simple, and for the B-tree, the leaf nodes and internal nodes need to move back and forth.
 
-> The difference between B tree and B + tree comes from: [differences-between-b-trees-and-b-trees] (https://stackoverflow.com/questions/870218/differences-between-b-trees-and-b-trees ), [The difference between B tree and B + tree] (https://www.cnblogs.com/ivictor/p/5849061.html)
+> The difference between B tree and B + tree comes from: [differences-between-b-trees-and-b-trees](https://stackoverflow.com/questions/870218/differences-between-b-trees-and-b-trees ), [The difference between B tree and B + tree](https://www.cnblogs.com/ivictor/p/5849061.html)
 
 #### Octree
 
@@ -1703,34 +1703,34 @@ An octree, or octree, is a tree-like data structure used to describe three-dimen
 
 Sorting Algorithm | Average Time Complexity | Worst Time Complexity | Space Complexity | Data Object Stability
 --- | --- | --- | --- | ---
-[Bubbling Sort] (Algorithm / BubbleSort.h) | O (n <sup> 2 </sup>) | O (n <sup> 2 </sup>) | O (1) | Stable
-[Select Sort] (Algorithm / SelectionSort.h) | O (n <sup> 2 </sup>) | O (n <sup> 2 </sup>) | O (1) | The array is unstable and the linked list is stable
-[Insert Sort] (Algorithm / InsertSort.h) | O (n <sup> 2 </sup>) | O (n <sup> 2 </sup>) | O (1) | Stable
-[Quick Sort] (Algorithm / QuickSort.h) | O (n * log <sub> 2 </sub> n) | O (n <sup> 2 </sup>) | O (log <sub> 2 </sub> n) | unstable
-[Heap Sort] (Algorithm / HeapSort.cpp) | O (n * log <sub> 2 </sub> n) | O (n * log <sub> 2 </sub> n) | O (1) | No stable
-[Merge Sort] (Algorithm / MergeSort.h) | O (n * log <sub> 2 </sub> n) | O (n * log <sub> 2 </sub> n) | O (n) | Stable
-[Hill Sort] (Algorithm / ShellSort.h) | O (n * log <sup> 2 </sup> n) | O (n <sup> 2 </sup>) | O (1) | Unstable
-[Count Sort] (Algorithm / CountSort.cpp) | O (n + m) | O (n + m) | O (n + m) | Stable
-[Bucket Sorting] (Algorithm / BucketSort.cpp) | O (n) | O (n) | O (m) | Stable
-[Base Sorting] (Algorithm / RadixSort.h) | O (k * n) | O (n <sup> 2 </sup>) | | Stable
+[Bubbling Sort](Algorithm / BubbleSort.h) | O (n <sup> 2 </sup>) | O (n <sup> 2 </sup>) | O (1) | Stable
+[Select Sort](Algorithm / SelectionSort.h) | O (n <sup> 2 </sup>) | O (n <sup> 2 </sup>) | O (1) | The array is unstable and the linked list is stable
+[Insert Sort](Algorithm / InsertSort.h) | O (n <sup> 2 </sup>) | O (n <sup> 2 </sup>) | O (1) | Stable
+[Quick Sort](Algorithm / QuickSort.h) | O (n * log <sub> 2 </sub> n) | O (n <sup> 2 </sup>) | O (log <sub> 2 </sub> n) | unstable
+[Heap Sort](Algorithm / HeapSort.cpp) | O (n * log <sub> 2 </sub> n) | O (n * log <sub> 2 </sub> n) | O (1) | No stable
+[Merge Sort](Algorithm / MergeSort.h) | O (n * log <sub> 2 </sub> n) | O (n * log <sub> 2 </sub> n) | O (n) | Stable
+[Hill Sort](Algorithm / ShellSort.h) | O (n * log <sup> 2 </sup> n) | O (n <sup> 2 </sup>) | O (1) | Unstable
+[Count Sort](Algorithm / CountSort.cpp) | O (n + m) | O (n + m) | O (n + m) | Stable
+[Bucket Sorting](Algorithm / BucketSort.cpp) | O (n) | O (n) | O (m) | Stable
+[Base Sorting](Algorithm / RadixSort.h) | O (k * n) | O (n <sup> 2 </sup>) | | Stable
 
 > * Are arranged from small to large
 > * k: represents the number of "digits" in the value
 > * n: represents the data size
 > * m: represents the maximum value minus the minimum value of the data
-> * From: [wikipedia. Sorting algorithm] (https://zh.wikipedia.org/wiki/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95)
+> * From: [wikipedia. Sorting algorithm](https://zh.wikipedia.org/wiki/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95)
 
 ### Find
 
 Search Algorithm | Average Time Complexity | Space Complexity | Search Condition
 --- | --- | --- | ---
-[Sequential Search] (Algorithm / SequentialSearch.h) | O (n) | O (1) | Unordered or Ordered
-[Binary search (half search)] (Algorithm / BinarySearch.h) | O (log <sub> 2 </sub> n) | O (1) | Ordered
-[Interpolation search] (Algorithm / InsertionSearch.h) | O (log <sub> 2 </sub> (log <sub> 2 </sub> n)) | O (1) | Ordered
-[Fibonacci Search] (Algorithm / FibonacciSearch.cpp) | O (log <sub> 2 </sub> n) | O (1) | Ordered
-[Hash Search] (DataStructure / HashTable.cpp) | O (1) | O (n) | Unordered or Ordered
-[Binary Search Tree (Binary Search Tree Search)] (Algorithm / BSTSearch.h) | O (log <sub> 2 </sub> n) | |
-[红黑 树] (DataStructure / RedBlackTree.cpp) | O (log <sub> 2 </sub> n) | |
+[Sequential Search](Algorithm / SequentialSearch.h) | O (n) | O (1) | Unordered or Ordered
+[Binary search (half search)](Algorithm / BinarySearch.h) | O (log <sub> 2 </sub> n) | O (1) | Ordered
+[Interpolation search](Algorithm / InsertionSearch.h) | O (log <sub> 2 </sub> (log <sub> 2 </sub> n)) | O (1) | Ordered
+[Fibonacci Search](Algorithm / FibonacciSearch.cpp) | O (log <sub> 2 </sub> n) | O (1) | Ordered
+[Hash Search](DataStructure / HashTable.cpp) | O (1) | O (n) | Unordered or Ordered
+[Binary Search Tree (Binary Search Tree Search)](Algorithm / BSTSearch.h) | O (log <sub> 2 </sub> n) | |
+[红黑 树](DataStructure / RedBlackTree.cpp) | O (log <sub> 2 </sub> n) | |
 2-3 tree | O (log <sub> 2 </sub> n-log <sub> 3 </sub> n) | |
 B tree / B + tree | O (log <sub> 2 </sub> n) | |
 
@@ -1738,45 +1738,45 @@ B tree / B + tree | O (log <sub> 2 </sub> n) | |
 
 Graph search algorithm | data structure | traversal time complexity | space complexity
 --- | --- | --- | ---
-[BFS breadth first search] (https://en.wikipedia.org/wiki/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C% E7% B4% A2) | Adjacency matrix <br/> Adjacency list | O (\ | v \ | <sup> 2 </sup>) <br/> O (\ | v \ | + \ | E \ |) | O (\ | v \ | <sup> 2 </sup>) <br/> O (\ | v \ | + \ | E \ |)
-[DFS Depth First Search] (https://zh.wikipedia.org/wiki/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C% E7% B4% A2) | Adjacency matrix <br/> Adjacency list | O (\ | v \ | <sup> 2 </sup>) <br/> O (\ | v \ | + \ | E \ |) | O (\ | v \ | <sup> 2 </sup>) <br/> O (\ | v \ | + \ | E \ |)
+[BFS breadth first search](https://en.wikipedia.org/wiki/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C% E7% B4% A2) | Adjacency matrix <br/> Adjacency list | O (\ | v \ | <sup> 2 </sup>) <br/> O (\ | v \ | + \ | E \ |) | O (\ | v \ | <sup> 2 </sup>) <br/> O (\ | v \ | + \ | E \ |)
+[DFS Depth First Search](https://zh.wikipedia.org/wiki/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C% E7% B4% A2) | Adjacency matrix <br/> Adjacency list | O (\ | v \ | <sup> 2 </sup>) <br/> O (\ | v \ | + \ | E \ |) | O (\ | v \ | <sup> 2 </sup>) <br/> O (\ | v \ | + \ | E \ |)
 
 ### Other algorithms
 
 Algorithm | Idea | Application
 --- | --- | ---
-[Divide and Conquer] (https://zh.wikipedia.org/wiki/%E5%88%86%E6%B2%BB%E6%B3%95) | divide a complex problem into two or more The same or similar sub-problems, until the last sub-problem can be simply solved directly, the solution of the original problem is the combination of the sub-problems | [round robin schedule problem] (https://github.com/mihir3445/interview/tree/ master / Problems / RoundRobinProblem), sorting algorithm (quick sorting, merge sorting)
-[Dynamic Planning] (https://zh.wikipedia.org/wiki/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92)|By decomposing the original problem into relative A simple subproblem method for solving complex problems, suitable for problems with overlapping subproblems and optimal substructure properties | [Backpack problem] (https://github.com/mihir3445/interview/tree/master/Problems/ KnapsackProblem), Fibonacci sequence
-[Greedy method] (https://zh.wikipedia.org/wiki/%E8%B4%AA%E5%BF%83%E6%B3%95)|A choice in each step is taken in the current state The best or optimal (that is, the most favorable) choice, which hopes to result in the best or optimal algorithm | travel salesman problem (shortest path problem), minimum spanning tree, Huffman coding
+[Divide and Conquer](https://zh.wikipedia.org/wiki/%E5%88%86%E6%B2%BB%E6%B3%95) | divide a complex problem into two or more The same or similar sub-problems, until the last sub-problem can be simply solved directly, the solution of the original problem is the combination of the sub-problems | [round robin schedule problem](https://github.com/mihir3445/interview/tree/ master / Problems / RoundRobinProblem), sorting algorithm (quick sorting, merge sorting)
+[Dynamic Planning](https://zh.wikipedia.org/wiki/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92)|By decomposing the original problem into relative A simple subproblem method for solving complex problems, suitable for problems with overlapping subproblems and optimal substructure properties | [Backpack problem](https://github.com/mihir3445/interview/tree/master/Problems/ KnapsackProblem), Fibonacci sequence
+[Greedy method](https://zh.wikipedia.org/wiki/%E8%B4%AA%E5%BF%83%E6%B3%95)|A choice in each step is taken in the current state The best or optimal (that is, the most favorable) choice, which hopes to result in the best or optimal algorithm | travel salesman problem (shortest path problem), minimum spanning tree, Huffman coding
 
 ## ❓ Problems
 
 ### Single Problem
 
-* [Chessboard Coverage Problem] (Problems / ChessboardCoverageProblem)
-* [Knapsack Problem] (Problems / KnapsackProblem)
+* [Chessboard Coverage Problem](Problems / ChessboardCoverageProblem)
+* [Knapsack Problem](Problems / KnapsackProblem)
 * [Neumann Neighbor Problem (Problems / NeumannNeighborProblem)]
-* [Round Robin Problem (Round Robin Problem)] (Problems / RoundRobinProblem)
+* [Round Robin Problem (Round Robin Problem)](Problems / RoundRobinProblem)
 * [Tubing Problem (Problems / TubingProblem)]
 
 ### Leetcode Problems
 
-* [Github. Haoel / leetcode] (https://github.com/haoel/leetcode)
-* [Github. Pezy / LeetCode] (https://github.com/pezy/LeetCode)
+* [Github. Haoel / leetcode](https://github.com/haoel/leetcode)
+* [Github. Pezy / LeetCode](https://github.com/pezy/LeetCode)
 
 ### Sword Finger Offer
 
-* [Github. Zhedahht / CodingInterviewChinese2] (https://github.com/zhedahht/CodingInterviewChinese2)
-* [Github. Gatieme / CodingInterviews] (https://github.com/gatieme/CodingInterviews)
+* [Github. Zhedahht / CodingInterviewChinese2](https://github.com/zhedahht/CodingInterviewChinese2)
+* [Github. Gatieme / CodingInterviews](https://github.com/gatieme/CodingInterviews)
 
 ### Cracking the Coding Interview Programmer Interview Gold Code
 
-* [Github. Careercup / ctci] (https://github.com/careercup/ctci)
-* [Niu Ke. Programmer Interview Gold Code] (https://www.nowcoder.com/ta/cracking-the-coding-interview)
+* [Github. Careercup / ctci](https://github.com/careercup/ctci)
+* [Niu Ke. Programmer Interview Gold Code](https://www.nowcoder.com/ta/cracking-the-coding-interview)
 
 ### Niuke.com
 
-* [Nuke. Online Programming Topics] (https://www.nowcoder.com/activity/oj)
+* [Nuke. Online Programming Topics](https://www.nowcoder.com/activity/oj)
 
 ## � Operating system
 
@@ -1838,7 +1838,7 @@ For threadless systems:
 
 The purpose of communication between threads is mainly used for thread synchronization, so threads do not have a communication mechanism for data exchange like process communication
 
-> The communication method between processes and the advantages and disadvantages come from: [summary of process thread interview questions] (http://blog.csdn.net/wujiafei_njgcxy/article/details/77098977)
+> The communication method between processes and the advantages and disadvantages come from: [summary of process thread interview questions](http://blog.csdn.net/wujiafei_njgcxy/article/details/77098977)
 
 #### Private and shared resources between processes
 
@@ -1903,8 +1903,8 @@ Little endian | 78 | 56 | 34 | 12
 
 Big endian little endian pictures
 
-![Big Endian Order] (https://raw.githubusercontent.com/mihir3445/interview/master/images/CPU-Big-Endian.svg.png)
-![Little Endian Order] (https://raw.githubusercontent.com/mihir3445/interview/master/images/CPU-Little-Endian.svg.png)
+![Big Endian Order](https://raw.githubusercontent.com/mihir3445/interview/master/images/CPU-Big-Endian.svg.png)
+![Little Endian Order](https://raw.githubusercontent.com/mihir3445/interview/master/images/CPU-Little-Endian.svg.png)
 
 ##### Judging big endian little endian
 
@@ -1968,7 +1968,7 @@ Local:
 
 Computer network architecture:
 
-![Computer Network Architecture] (https://raw.githubusercontent.com/mihir3445/interview/master/images/Computer Network Architecture.png)
+![Computer Network Architecture](https://raw.githubusercontent.com/mihir3445/interview/master/images/Computer Network Architecture.png)
 
 ### The role and agreement of each layer
 
@@ -2047,12 +2047,12 @@ Class E | The first five digits are fixed at 11110, the latter are reserved for 
 
 IP datagram format:
 
-![IP datagram format] (https://raw.githubusercontent.com/mihir3445/interview/master/images/IP datagram format.png)
+![IP datagram format](https://raw.githubusercontent.com/mihir3445/interview/master/images/IP datagram format.png)
 #### ICMP Internet Control Message Protocol
 
 ICMP message format:
 
-![ICMP message format] (https://raw.githubusercontent.com/mihir3445/interview/master/images/ICMP message format.png)
+![ICMP message format](https://raw.githubusercontent.com/mihir3445/interview/master/images/ICMP message format.png)
 
 application:
 * PING (Packet InterNet Groper) detects the connectivity between two hosts
@@ -2122,11 +2122,11 @@ How TCP guarantees reliable transmission:
 
 TCP message structure
 
-![TCP message] (https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP message.png)
+![TCP message](https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP message.png)
 
 TCP header
 
-![TCP header] (https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP header.png)
+![TCP header](https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP header.png)
 
 TCP: Status Control Code (Code, Control Flag), which occupies 6 bits and has the following meanings:
 * URG: urgent bit (urgent). When `URG = 1, it indicates that the urgent pointer field is valid, which means the packet is an urgent packet. It tells the system that there is urgent data in this segment, which should be transmitted as soon as possible (equivalent to high-priority data), and the Urgent Pointer field in the above figure will also be enabled.
@@ -2150,11 +2150,11 @@ feature:
 
 UDP message structure
 
-![UDP message] (https://raw.githubusercontent.com/mihir3445/interview/master/images/UDP message.png)
+![UDP message](https://raw.githubusercontent.com/mihir3445/interview/master/images/UDP message.png)
 
 UDP header
 
-![UDP Header] (https://raw.githubusercontent.com/mihir3445/interview/master/images/UDPHeader.png)
+![UDP Header](https://raw.githubusercontent.com/mihir3445/interview/master/images/UDPHeader.png)
 
 > TCP / UDP pictures from: <https://github.com/JerryC8080/understand-tcp-udp>
 
@@ -2218,7 +2218,7 @@ TCP congestion control diagram
 
 ##### TCP three-way handshake to establish a connection
 
-![UDP message] (https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP three-way handshake to establish a connection.png)
+![UDP message](https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP three-way handshake to establish a connection.png)
 
 [Explain the whole process of TCP connection establishment]
 
@@ -2231,19 +2231,19 @@ TCP congestion control diagram
 
 [Answer One] Because the channel is unreliable, and TCP wants to establish a reliable transmission on the unreliable channel, then three communications is the theoretical minimum. (And UDP does not need to establish a reliable transmission, so UDP does not require a three-way handshake.)
 
-> [Google Groups. Why is TCP a three-way handshake to establish a connection? {Technology} {Network Communication}] (https://groups.google.com/forum/#!msg/pongba/kF6O7-MFxM0/5S7zIJ4yqKUJ)
+> [Google Groups. Why is TCP a three-way handshake to establish a connection? {Technology} {Network Communication}](https://groups.google.com/forum/#!msg/pongba/kF6O7-MFxM0/5S7zIJ4yqKUJ)
 
 [Answer II] Because both parties need to confirm that the other party has received the serial number sent by themselves, the confirmation process requires at least three communications.
 
-> [Know. Why is TCP a three-way handshake instead of two or four? ] (https://www.zhihu.com/question/24853633/answer/115173386)
+> [Know. Why is TCP a three-way handshake instead of two or four? ](https://www.zhihu.com/question/24853633/answer/115173386)
 
 [Answer three] In order to prevent the invalid connection request segment from being sent to the server suddenly, an error is generated.
 
-> ["Computer Network (7th Edition) -Xie Xiren"] (https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP-transport-connection-management.png)
+> ["Computer Network (7th Edition) -Xie Xiren"](https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP-transport-connection-management.png)
 
 ##### TCP four waves to release the connection
 
-![UDP message] (https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP four waves to release the connection.png)
+![UDP message](https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP four waves to release the connection.png)
 
 [Explain the whole process of TCP release connection]
 
@@ -2276,7 +2276,7 @@ TCP congestion control diagram
 
 TCP finite state machine picture
 
-![TCP's finite state machine] (https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP's finite state machine.png)
+![TCP's finite state machine](https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP's finite state machine.png)
 
 ### Application layer
 
@@ -2369,9 +2369,9 @@ Status code (Status-Code)
 
 ### Socket
 
-> [Linux Socket programming (not limited to Linux)] (https://www.cnblogs.com/skynet/archive/2010/12/12/1903949.html)
+> [Linux Socket programming (not limited to Linux)](https://www.cnblogs.com/skynet/archive/2010/12/12/1903949.html)
 
-![Socket client server communication] (https://raw.githubusercontent.com/mihir3445/interview/master/images/socket client server communication.jpg)
+![Socket client server communication](https://raw.githubusercontent.com/mihir3445/interview/master/images/socket client server communication.jpg)
 
 
 #### Socket read () and write () functions
@@ -2407,7 +2407,7 @@ We know that TCP establishes a connection by performing a "three-way handshake",
 
 Only the three-way handshake is finished, but what about the three-way handshake in the socket function? Please see the picture below:
 
-![TCP three-way handshake sent in socket] (http://images.cnblogs.com/cnblogs_com/skynet/201012/201012122157467258.png)
+![TCP three-way handshake sent in socket](http://images.cnblogs.com/cnblogs_com/skynet/201012/201012122157467258.png)
 
 It can be seen from the figure:
 1. When the client calls connect, a connection request is triggered and a SYN J packet is sent to the server. At this time, connect enters a blocking state;
@@ -2419,7 +2419,7 @@ It can be seen from the figure:
 
 The above describes the three-way handshake establishment process of TCP in socket and the socket functions involved. Now we introduce the process of releasing the connection by the four-way handshake in the socket, please see the following figure:
 
-![TCP four-way handshake sent in socket] (http://images.cnblogs.com/cnblogs_com/skynet/201012/201012122157487616.png)
+![TCP four-way handshake sent in socket](http://images.cnblogs.com/cnblogs_com/skynet/201012/201012122157487616.png)
 
 The illustrated process is as follows:
 
@@ -2502,7 +2502,7 @@ So there is a FIN and ACK in each direction.
   </tr>
 </table>
 
-> SQL syntax tutorial: [runoob. SQL tutorial] (http://www.runoob.com/sql/sql-tutorial.html)
+> SQL syntax tutorial: [runoob. SQL tutorial](http://www.runoob.com/sql/sql-tutorial.html)
 
 ### Relational Database
 
@@ -2512,7 +2512,7 @@ So there is a FIN and ACK in each direction.
 #### Index
 
 * Database index: sequential index, B + tree index, hash index
-* [Data structure and algorithm principle behind MySQL index] (http://blog.codinglabs.org/articles/theory-of-mysql-index.html)
+* [Data structure and algorithm principle behind MySQL index](http://blog.codinglabs.org/articles/theory-of-mysql-index.html)
 
 ### Database integrity
 
@@ -2557,29 +2557,29 @@ So there is a FIN and ACK in each direction.
 
 ## � Design pattern
 
-> Examples of major design patterns: [CSDN column. C ++ design patterns] (https://blog.csdn.net/liang19890820/article/details/66974516) series of blog posts
+> Examples of major design patterns: [CSDN column. C ++ design patterns](https://blog.csdn.net/liang19890820/article/details/66974516) series of blog posts
 
-[Design Pattern Engineering Directory] (DesignPattern)
+[Design Pattern Engineering Directory](DesignPattern)
 
 ### Singleton mode
 
-[Singleton pattern example] (DesignPattern / SingletonPattern)
+[Singleton pattern example](DesignPattern / SingletonPattern)
 
 ### Abstract factory pattern
 
-[Abstract factory pattern example] (DesignPattern / AbstractFactoryPattern)
+[Abstract factory pattern example](DesignPattern / AbstractFactoryPattern)
 
 ### Adapter mode
 
-[Adapter pattern example] (DesignPattern / AdapterPattern)
+[Adapter pattern example](DesignPattern / AdapterPattern)
 
 ### Bridge Mode
 
-[Bridge Pattern Example] (DesignPattern / BridgePattern)
+[Bridge Pattern Example](DesignPattern / BridgePattern)
 
 ### Observer mode
 
-[Observer pattern example] (DesignPattern / ObserverPattern)
+[Observer pattern example](DesignPattern / ObserverPattern)
 
 ### Six principles of design patterns
 
@@ -3142,7 +3142,7 @@ contain:
 
 ## � Books
 
-> [mihir3445 / CS-Books] (https://github.com/mihir3445/CS-Books): � Computer Science Books Computer Technology Books PDF
+> [mihir3445 / CS-Books](https://github.com/mihir3445/CS-Books): � Computer Science Books Computer Technology Books PDF
 
 ### Language
 
@@ -3262,55 +3262,55 @@ contain:
 
 ## � Review brush question website
 
-* [cplusplus] (http://www.cplusplus.com/)
-* [cppreference] (https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5)
-* [runoob] (http://www.runoob.com/cplusplus/cpp-tutorial.html)
-* [leetcode] (https://leetcode.com/) | [leetcode-cn] (https://leetcode-cn.com/)
-* [lintcode] (https://www.lintcode.com/)
-* [nowcoder] (https://www.nowcoder.net/)
+* [cplusplus](http://www.cplusplus.com/)
+* [cppreference](https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5)
+* [runoob](http://www.runoob.com/cplusplus/cpp-tutorial.html)
+* [leetcode](https://leetcode.com/) | [leetcode-cn](https://leetcode-cn.com/)
+* [lintcode](https://www.lintcode.com/)
+* [nowcoder](https://www.nowcoder.net/)
 
 ## � Interview question
 
-* [Niu Ke.. 2020 Autumn Recruitment Noodles Summary! (Post division)] (https://www.nowcoder.com/discuss/205497)
-* [Niuke.com] [Preparation for Autumn Tricks] Strategy for 2020 Autumn Tricks] (https://www.nowcoder.com/discuss/197116)
-* [Niuke.com 2019 School Recruitment Summary![Daily Update]] (https://www.nowcoder.com/discuss/90907)
-* [Niuke.com 2019 School Recruitment Technology Posts Summary [Technology]] (https://www.nowcoder.com/discuss/146655)
-* [Niu Ke.. Summary of 2018 School Recruitment Written Test Questions] (https://www.nowcoder.com/discuss/68802)
-* [Niu Ke.. The 2017 Autumn Campus Recruitment Pen Jing Face Special Topic Summary] (https://www.nowcoder.com/discuss/12805)
-* [Niu Ke. The most complete collection of 2017 spring tricks in history! ! ] (https://www.nowcoder.com/discuss/25268)
-* [Nukke. Interview questions are here] (https://www.nowcoder.com/discuss/57978)
-* [Knowing.. On the Internet job search, what well-written and attentive face have you seen? It is best to share your own facial and mental journey. ] (https://www.zhihu.com/question/29693016)
-* [Know. What are the most common interview algorithm questions for internet companies? ] (https://www.zhihu.com/question/24964987)
-* [CSDN. C ++ Interview Questions Completely Organized] (http://blog.csdn.net/ljzcome/article/details/574158)
-* [CSDN. Baidu R & D interview questions (C ++ direction)] (http://blog.csdn.net/Xiongchao99/article/details/74524807?locationNum=6&fps=1)
-* [CSDN. C ++ 30 common interview questions] (http://blog.csdn.net/fakine/article/details/51321544)
-* [CSDN. Tencent 2016 intern interview experience (already got offer)] (http://blog.csdn.net/onever_say_love/article/details/51223886)
-* [cnblogs. C ++ Interview Collection (Questions Asked for Interview)] (https://www.cnblogs.com/Y1Focus/p/6707121.html)
-* [cnblogs. C / C ++ written and interview questions summary] (https://www.cnblogs.com/fangyukuan/archive/2010/09/18/1829871.html)
-* [cnblogs. Summary of common C ++ interview questions and basic knowledge points (1)] (https://www.cnblogs.com/LUO77/p/5771237.html)
-* [segmentfault. Summary of common interview questions in C ++] (https://segmentfault.com/a/1190000003745529)
+* [Niu Ke.. 2020 Autumn Recruitment Noodles Summary! (Post division)](https://www.nowcoder.com/discuss/205497)
+* [Niuke.com] [Preparation for Autumn Tricks] Strategy for 2020 Autumn Tricks](https://www.nowcoder.com/discuss/197116)
+* [Niuke.com 2019 School Recruitment Summary![Daily Update]](https://www.nowcoder.com/discuss/90907)
+* [Niuke.com 2019 School Recruitment Technology Posts Summary [Technology]](https://www.nowcoder.com/discuss/146655)
+* [Niu Ke.. Summary of 2018 School Recruitment Written Test Questions](https://www.nowcoder.com/discuss/68802)
+* [Niu Ke.. The 2017 Autumn Campus Recruitment Pen Jing Face Special Topic Summary](https://www.nowcoder.com/discuss/12805)
+* [Niu Ke. The most complete collection of 2017 spring tricks in history! ! ](https://www.nowcoder.com/discuss/25268)
+* [Nukke. Interview questions are here](https://www.nowcoder.com/discuss/57978)
+* [Knowing.. On the Internet job search, what well-written and attentive face have you seen? It is best to share your own facial and mental journey. ](https://www.zhihu.com/question/29693016)
+* [Know. What are the most common interview algorithm questions for internet companies? ](https://www.zhihu.com/question/24964987)
+* [CSDN. C ++ Interview Questions Completely Organized](http://blog.csdn.net/ljzcome/article/details/574158)
+* [CSDN. Baidu R & D interview questions (C ++ direction)](http://blog.csdn.net/Xiongchao99/article/details/74524807?locationNum=6&fps=1)
+* [CSDN. C ++ 30 common interview questions](http://blog.csdn.net/fakine/article/details/51321544)
+* [CSDN. Tencent 2016 intern interview experience (already got offer)](http://blog.csdn.net/onever_say_love/article/details/51223886)
+* [cnblogs. C ++ Interview Collection (Questions Asked for Interview)](https://www.cnblogs.com/Y1Focus/p/6707121.html)
+* [cnblogs. C / C ++ written and interview questions summary](https://www.cnblogs.com/fangyukuan/archive/2010/09/18/1829871.html)
+* [cnblogs. Summary of common C ++ interview questions and basic knowledge points (1)](https://www.cnblogs.com/LUO77/p/5771237.html)
+* [segmentfault. Summary of common interview questions in C ++](https://segmentfault.com/a/1190000003745529)
 
 ## � Recommend
 
-* [Github. CyC2018 / Job-Recommend] (https://github.com/CyC2018/Job-Recommend): � Internet internal push information (social recruitment, school recruitment, internship)
-* [Github. Amusi / AI-Job-Recommend] (https://github.com/amusi/AI-Job-Recommend): direction of artificial intelligence of domestic companies (including machine learning, deep learning, computer vision and natural language processing) Job recruitment information (including full-time, internship and school recruitment)
+* [Github. CyC2018 / Job-Recommend](https://github.com/CyC2018/Job-Recommend): � Internet internal push information (social recruitment, school recruitment, internship)
+* [Github. Amusi / AI-Job-Recommend](https://github.com/amusi/AI-Job-Recommend): direction of artificial intelligence of domestic companies (including machine learning, deep learning, computer vision and natural language processing) Job recruitment information (including full-time, internship and school recruitment)
 
 ## � Contributors
 
 Including Issues and PRs for errata, sorted according to contribution time.
 
-[tamarous] (https://github.com/tamarous), [i0Ek3] (https://github.com/i0Ek3), [sniper00] (https://github.com/sniper00), [blackhorse001] (https : //github.com/blackhorse001), [houbaron] (https://github.com/houbaron), [Qouan] (https://github.com/Qouan), [2329408386] (https://github.com com / 2329408386), [FlyingfishMORE] (https://github.com/FlyingfishMORE), [Ematrix163] (https://github.com/Ematrix163), [ReturnZero23] (https://github.com/ReturnZero23), [kelvinkuo] (https://github.com/kelvinkuo), [henryace] (https://github.com/henryace), [xinghun] (https://github.com/xinghun), [maokelong] (https : //github.com/maokelong), [easyYao] (https://github.com/easyYao), [FengZiYjun] (https://github.com/FengZiYjun), [shangjiaxuan] (https://github.com com / shangjiaxuan), [kwongtailau] (https://github.com/kwongtailau), [asky991] (https://github.com/asky991), [traviszeng] (https://github.com/traviszeng), [kele1997] (https://github.com/kele1997), [hxdnshx] (https://github.com/hxdnshx), [a74731248] (https://github.com/a 74731248), [qvjp] (https://github.com/qvjp), [xindelvcheng] (https://github.com/xindelvcheng), [hbsun2113] (https://github.com/hbsun2113), [linkwk7 ] (https://github.com/linkwk7), [foolishflyfox] (https://github.com/foolishflyfox), [zhjp0] (https://github.com/zhjp0), [Mrtj2016] (https: / /github.com/Mrtj2016)
+[tamarous](https://github.com/tamarous), [i0Ek3](https://github.com/i0Ek3), [sniper00](https://github.com/sniper00), [blackhorse001](https : //github.com/blackhorse001), [houbaron](https://github.com/houbaron), [Qouan](https://github.com/Qouan), [2329408386](https://github.com com / 2329408386), [FlyingfishMORE](https://github.com/FlyingfishMORE), [Ematrix163](https://github.com/Ematrix163), [ReturnZero23](https://github.com/ReturnZero23), [kelvinkuo](https://github.com/kelvinkuo), [henryace](https://github.com/henryace), [xinghun](https://github.com/xinghun), [maokelong](https : //github.com/maokelong), [easyYao](https://github.com/easyYao), [FengZiYjun](https://github.com/FengZiYjun), [shangjiaxuan](https://github.com com / shangjiaxuan), [kwongtailau](https://github.com/kwongtailau), [asky991](https://github.com/asky991), [traviszeng](https://github.com/traviszeng), [kele1997](https://github.com/kele1997), [hxdnshx](https://github.com/hxdnshx), [a74731248](https://github.com/a 74731248), [qvjp](https://github.com/qvjp), [xindelvcheng](https://github.com/xindelvcheng), [hbsun2113](https://github.com/hbsun2113), [linkwk7 ](https://github.com/linkwk7), [foolishflyfox](https://github.com/foolishflyfox), [zhjp0](https://github.com/zhjp0), [Mrtj2016](https: / /github.com/Mrtj2016)
 
 ## � License
 
 This warehouse follows the CC BY-NC-SA 4.0 (signed-non-commercial use-sharing in the same way) agreement, please indicate the source for reprinting, and may not be used for commercial purposes.
 
-[![CC BY-NC-SA 4.0] (https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)] (LICENSE)
+[![CC BY-NC-SA 4.0](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](LICENSE)
 
 � This is a summary of basic knowledge for job seekers and beginners in C / C ++ technology direction, including language, library, data structure, algorithm, system, network, link loading library and other knowledge and interview experience, recruitment, internal promotion And other information.
 
-� Side directory support methods: [� Docsify documentation] (https://interview.huihut.com), [Github + TOC navigation] (https://github.com/jawil/GayHub) ([TOC preview.png] (https://raw.githubusercontent.com/mihir3445/interview/master/images/TOC preview.png))
+� Side directory support methods: [� Docsify documentation](https://interview.huihut.com), [Github + TOC navigation](https://github.com/jawil/GayHub) ([TOC preview.png](https://raw.githubusercontent.com/mihir3445/interview/master/images/TOC preview.png))
 
-� Save as PDF: Use the Chrome browser to open the <a href="https://interview.huihut.com"> � Docsify document </a> page, shrink the left directory-right click-print-select the target printer is Save as PDF-Save ([Print Preview.png] (https://raw.githubusercontent.com/mihir3445/interview/master/images/Print Preview.png))
+� Save as PDF: Use the Chrome browser to open the <a href="https://interview.huihut.com"> � Docsify document </a> page, shrink the left directory-right click-print-select the target printer is Save as PDF-Save ([Print Preview.png](https://raw.githubusercontent.com/mihir3445/interview/master/images/Print Preview.png))
 
-� If there are any errors or improvements in the contents of the warehouse, issues are welcome. Suggestions or discussions can be submitted at [# 12] (https://github.com/mihir3445/interview/issues/12). Due to my limited level, the knowledge points in the warehouse are from my original, reading notes, books, blog posts, etc. Non-original has been marked with the source, if there is any omission, please issue an issue. This warehouse follows the [CC BY-NC-SA 4.0 (signed-non-commercial use-shared in the same way)] (LICENSE) agreement, please indicate the source for the reprint, and may not be used for commercial purposes.
+� If there are any errors or improvements in the contents of the warehouse, issues are welcome. Suggestions or discussions can be submitted at [# 12](https://github.com/mihir3445/interview/issues/12). Due to my limited level, the knowledge points in the warehouse are from my original, reading notes, books, blog posts, etc. Non-original has been marked with the source, if there is any omission, please issue an issue. This warehouse follows the [CC BY-NC-SA 4.0 (signed-non-commercial use-shared in the same way)](LICENSE) agreement, please indicate the source for the reprint, and may not be used for commercial purposes.
