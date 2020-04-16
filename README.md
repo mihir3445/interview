@@ -734,7 +734,7 @@ int main ()
 
 Object-oriented programming (OOP) is a paradigm of programming with object concepts, and it is also an abstract policy for program development.
 
-![Object Oriented Features](https://raw.githubusercontent.com/mihir3445/interview/master/images/Basic Object Oriented Features.png)
+![Object Oriented Features](https://raw.githubusercontent.com/mihir3445/interview/master/images/Basic-Object-Oriented-Features.png)
 
 Three characteristics of object-oriented-encapsulation, inheritance, polymorphism
 
@@ -1969,7 +1969,7 @@ Local:
 
 Computer network architecture:
 
-![Computer Network Architecture](https://raw.githubusercontent.com/mihir3445/interview/master/images/Computer Network Architecture.png)
+![Computer Network Architecture](https://raw.githubusercontent.com/mihir3445/interview/master/images/Computer-Network-Architecture.png)
 
 ### The role and agreement of each layer
 
@@ -2048,12 +2048,12 @@ Class E | The first five digits are fixed at 11110, the latter are reserved for 
 
 IP datagram format:
 
-![IP datagram format](https://raw.githubusercontent.com/mihir3445/interview/master/images/IP datagram format.png)
+![IP datagram format](https://raw.githubusercontent.com/mihir3445/interview/master/images/IP-datagram-format.png)
 #### ICMP Internet Control Message Protocol
 
 ICMP message format:
 
-![ICMP message format](https://raw.githubusercontent.com/mihir3445/interview/master/images/ICMP message format.png)
+![ICMP message format](https://raw.githubusercontent.com/mihir3445/interview/master/images/ICMP-message-format.png)
 
 application:
 * PING (Packet InterNet Groper) detects the connectivity between two hosts
@@ -2123,11 +2123,11 @@ How TCP guarantees reliable transmission:
 
 TCP message structure
 
-![TCP message](https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP message.png)
+![TCP message](https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP-message.png)
 
 TCP header
 
-![TCP header](https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP header.png)
+![TCP header](https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP-header.png)
 
 TCP: Status Control Code (Code, Control Flag), which occupies 6 bits and has the following meanings:
 * URG: urgent bit (urgent). When `URG = 1, it indicates that the urgent pointer field is valid, which means the packet is an urgent packet. It tells the system that there is urgent data in this segment, which should be transmitted as soon as possible (equivalent to high-priority data), and the Urgent Pointer field in the above figure will also be enabled.
@@ -2151,11 +2151,11 @@ feature:
 
 UDP message structure
 
-![UDP message](https://raw.githubusercontent.com/mihir3445/interview/master/images/UDP message.png)
+![UDP message](https://raw.githubusercontent.com/mihir3445/interview/master/images/UDP-message.png)
 
 UDP header
 
-![UDP Header](https://raw.githubusercontent.com/mihir3445/interview/master/images/UDPHeader.png)
+![UDP Header](https://raw.githubusercontent.com/mihir3445/interview/master/images/UDP-header.png)
 
 > TCP / UDP pictures from: <https://github.com/JerryC8080/understand-tcp-udp>
 
@@ -2192,7 +2192,7 @@ Flow control is to make the sending rate of the sender not too fast, but to allo
 
 Variable window for flow control
 
-![](https://raw.githubusercontent.com/mihir3445/interview/master/images/Example of using variable windows for flow control.png)
+![](https://raw.githubusercontent.com/mihir3445/interview/master/images/Examples-of-flow-control-using-variable windows.png)
 
 #### TCP congestion control
 
@@ -2209,9 +2209,9 @@ Congestion control is to prevent excessive data from being injected into the net
 
 TCP congestion control diagram
 
-![](https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP congestion window cwnd changes during congestion control.png)
-![](https://raw.githubusercontent.com/mihir3445/interview/master/images/fast retransmission schematic.png)
-![](https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP congestion control flowchart.png)
+![](https://raw.githubusercontent.com/mihir3445/interview/master/images/The-change-of-TCP-congestion-window-cwnd-during-congestion-control.png)
+![](https://raw.githubusercontent.com/mihir3445/interview/master/images/fast-retransmission-schematic.png)
+![](https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP-transport-connection-management.png)
 
 #### TCP transmission connection management
 
@@ -2219,7 +2219,7 @@ TCP congestion control diagram
 
 ##### TCP three-way handshake to establish a connection
 
-![UDP message](https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP three-way handshake to establish a connection.png)
+![UDP message](https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP-three-way-handshake-to-establish-a-connection.png)
 
 [Explain the whole process of TCP connection establishment]
 
@@ -2244,7 +2244,7 @@ TCP congestion control diagram
 
 ##### TCP four waves to release the connection
 
-![UDP message](https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP four waves to release the connection.png)
+![UDP message](https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP-waved-four-times-to-release-connection.png)
 
 [Explain the whole process of TCP release connection]
 
@@ -2277,7 +2277,7 @@ TCP congestion control diagram
 
 TCP finite state machine picture
 
-![TCP's finite state machine](https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP's finite state machine.png)
+![TCP's finite state machine](https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP-finite-state machine.png)
 
 ### Application layer
 
@@ -3310,8 +3310,8 @@ This warehouse follows the CC BY-NC-SA 4.0 (signed-non-commercial use-sharing in
 
 � This is a summary of basic knowledge for job seekers and beginners in C / C ++ technology direction, including language, library, data structure, algorithm, system, network, link loading library and other knowledge and interview experience, recruitment, internal promotion And other information.
 
-� Side directory support methods: [� Docsify documentation](https://interview.huihut.com), [Github + TOC navigation](https://github.com/jawil/GayHub) ([TOC preview.png](https://raw.githubusercontent.com/mihir3445/interview/master/images/TOC preview.png))
+� Side directory support methods: [� Docsify documentation](https://interview.huihut.com), [Github + TOC navigation](https://github.com/jawil/GayHub) ([TOC preview.png](https://raw.githubusercontent.com/mihir3445/interview/master/images/TOC-preview.png))
 
-� Save as PDF: Use the Chrome browser to open the <a href="https://interview.huihut.com"> � Docsify document </a> page, shrink the left directory-right click-print-select the target printer is Save as PDF-Save ([Print Preview.png](https://raw.githubusercontent.com/mihir3445/interview/master/images/Print Preview.png))
+� Save as PDF: Use the Chrome browser to open the <a href="https://interview.huihut.com"> � Docsify document </a> page, shrink the left directory-right click-print-select the target printer is Save as PDF-Save ([Print Preview.png](https://raw.githubusercontent.com/mihir3445/interview/master/images/PrintPreview.png))
 
 � If there are any errors or improvements in the contents of the warehouse, issues are welcome. Suggestions or discussions can be submitted at [# 12](https://github.com/mihir3445/interview/issues/12). Due to my limited level, the knowledge points in the warehouse are from my original, reading notes, books, blog posts, etc. Non-original has been marked with the source, if there is any omission, please issue an issue. This warehouse follows the [CC BY-NC-SA 4.0 (signed-non-commercial use-shared in the same way)](LICENSE) agreement, please indicate the source for the reprint, and may not be used for commercial purposes.
