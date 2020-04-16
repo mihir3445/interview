@@ -1,47 +1,25 @@
-<div align="center">
-� Github
-&emsp;&emsp; | &emsp;&emsp;
-<a href="https://interview.huihut.com">� Docsify</a>
-</div> 
-<br>
-
-<b><details><summary>� 关于</summary></b>
-  
 NOTE :- This is english traslation version of the huihut/interview. All the credit goes to the original authors.
 
-� This is a summary of basic knowledge for job seekers and beginners in C / C ++ technology direction, including language, library, data structure, algorithm, system, network, link loading library and other knowledge and interview experience, recruitment, internal promotion And other information.
-
-� Side directory support methods: [� Docsify documentation] (https://interview.huihut.com), [Github + TOC navigation] (https://github.com/jawil/GayHub) ([TOC preview.png] (https://raw.githubusercontent.com/huihut/interview/master/images/TOC preview.png))
-
-� Save as PDF: Use the Chrome browser to open the <a href="https://interview.huihut.com"> � Docsify document </a> page, shrink the left directory-right click-print-select the target printer is Save as PDF-Save ([Print Preview.png] (https://raw.githubusercontent.com/huihut/interview/master/images/Print Preview.png))
-
-� If there are any errors or improvements in the contents of the warehouse, issues are welcome. Suggestions or discussions can be submitted at [# 12] (https://github.com/huihut/interview/issues/12). Due to my limited level, the knowledge points in the warehouse are from my original, reading notes, books, blog posts, etc. Non-original has been marked with the source, if there is any omission, please issue an issue. This warehouse follows the [CC BY-NC-SA 4.0 (signed-non-commercial use-shared in the same way)] (LICENSE) agreement, please indicate the source for the reprint, and may not be used for commercial purposes.
-
-</ details>
-
-
-## � Directory
+## � Index
 
 * [➕ C / C ++] (#-cc)
-* [⭐️ Effective] (# ️-effective)
+* [⭐️ Effective] (#-effective)
 * [� STL] (#-stl)
-* [〽️ Data Structure] (# ️-Data Structure)
-* [⚡️ Algorithm] (# ️-Algorithm)
+* [〽️ Data Structure] (#-Data Structure)
+* [⚡️ Algorithm] (#-Algorithm)
 * [❓ Problems] (#-problems)
-* [� Operating System] (# -operating system)
-* [☁️ Computer Network] (# ️-Computer Network)
-* [� Network Programming] (# -Network Programming)
+* [� Operating System] (#-operating system)
+* [☁️ Computer Network] (#-Computer Network)
+* [� Network Programming] (#-Network Programming)
 * [� Database] (#-Database)
-* [� Design Mode] (# -Design Mode)
-* [⚙️ Link loading library] (# ️-Link loading library)
-* [� Books] (#-书)
-* [� C / C ++ development direction] (# -cc-development direction)
-* [� Review brush questions website] (# -review brush questions website)
-* [� Interview Question Experience] (# -Interview Question Experience)
-* [� Recruitment Time Post] (# -Recruitment Time Post)
-* [� 内 推] (#-内 推)
-* [� Contributor] (# -Contributor)
-* [� Support Sponsor] (# -Support Sponsor)
+* [� Design Mode] (#-Design Mode)
+* [⚙️ Link loading library] (#-Link loading library)
+* [� Books] (#-books)
+* [� C / C ++ development direction] (#-cc-development direction)
+* [� Review brush questions website] (#-review brush questions website)
+* [� Interview Question] (#-Interview Question)
+* [� Inner Push] (#-Inner Push)
+* [� Contributor] (#-Contributor)
 * [� License] (#-license)
 
 ## ➕ C / C ++
@@ -58,11 +36,11 @@ NOTE :- This is english traslation version of the huihut/interview. All the cred
 #### const pointers and references
 
 * Pointer
-    * Pointer to const (pointer to const)
-    * It is a constant pointer (const pointer)
+    * Pointer to const (pointer to const)
+    * It is a constant pointer (const pointer)
 * Quote
-    * Reference to const (reference to const)
-    * There is no const reference, because the reference itself is a const pointer
+    * Reference to const (reference to const)
+    * There is no const reference, because the reference itself is a const pointer
 
 > (It can be imagined for the sake of memory) The value modified by const (behind const) cannot be changed, as shown in the following example using `p2`,` p3`
 
@@ -75,32 +53,32 @@ const use
 class A
 {
 private:
-    const int a; // constant object member, can only be assigned in the initialization list
+    const int a; // constant object member, can only be assigned in the initialization list
 
 public:
-    // Constructor
-    A (): a (0) {};
-    A (int x): a (x) {}; // initialization list
+    // Constructor
+    A (): a (0) {};
+    A (int x): a (x) {}; // initialization list
 
-    // const can be used to distinguish overloaded functions
-    int getValue (); // Ordinary member function
-    int getValue () const; // Constant member function, must not modify the value of any data member in the class
+    // const can be used to distinguish overloaded functions
+    int getValue (); // Ordinary member function
+    int getValue () const; // Constant member function, must not modify the value of any data member in the class
 };
 
 void function ()
 {
-    // object
-    A b; // Ordinary objects, you can call all member functions and update constant member variables
-    const A a; // Constant object, can only call constant member function
-    const A * p = & a; // Pointer variable, pointing to constant object
-    const A & q = a; // reference to constant object
+    // object
+    A b; // Ordinary objects, you can call all member functions and update constant member variables
+    const A a; // Constant object, can only call constant member function
+    const A * p = & a; // Pointer variable, pointing to constant object
+    const A & q = a; // reference to constant object
 
-    // pointer
-    char greeting [] = "Hello";
-    char * p1 = greeting; // pointer variable, pointing to character array variable
-    const char * p2 = greeting; // Pointer variable, pointing to the character array constant (const followed by char, indicating that the character pointed to (char) cannot be changed)
-    char * const p3 = greeting; // itself is a constant pointer to a character array variable (const is followed by p3, indicating that the p3 pointer itself cannot be changed)
-    const char * const p4 = greeting; // Pointer to a constant itself, pointing to a character array constant
+    // pointer
+    char greeting [] = "Hello";
+    char * p1 = greeting; // pointer variable, pointing to character array variable
+    const char * p2 = greeting; // Pointer variable, pointing to the character array constant (const followed by char, indicating that the character pointed to (char) cannot be changed)
+    char * const p3 = greeting; // itself is a constant pointer to a character array variable (const is followed by p3, indicating that the p3 pointer itself cannot be changed)
+    const char * const p4 = greeting; // Pointer to a constant itself, pointing to a character array constant
 }
 
 // function
@@ -132,9 +110,9 @@ int * const function7 (); // returns a constant pointer to a variable, use: int 
 4. The `this` pointer is implicitly declared as:` ClassName * const this`, which means that the `this` pointer cannot be assigned; in the` const` member function of the `ClassName` class, the type of` this` pointer It is: `const ClassName * const`, which means that the object pointed to by` this` pointer cannot be modified (that is, the data member of this object cannot be assigned)
 5. `this` is not a regular variable, but an rvalue, so you cannot get the address of` this` (cannot be `& this`).
 6. In the following scenarios, it is often necessary to explicitly reference the `this` pointer:
-    1. Chained references for implementing objects;
-    2. In order to avoid assignment operations on the same object;
-    3. When implementing some data structures, such as `list`.
+    1. Chained references for implementing objects;
+    2. In order to avoid assignment operations on the same object;
+    3. When implementing some data structures, such as `list`.
 
 ### inline function
 
@@ -162,12 +140,12 @@ inline int functionName (int first, int second, ...) {/ **** /};
 
 // Defined within the class, implicitly inline
 class A {
-    int doA () {return 0;} // implicit inlining
+    int doA () {return 0;} // implicit inlining
 }
 
 // Out-of-class definition, need to be explicitly inline
 class A {
-    int doA ();
+    int doA ();
 }
 inline int A :: doA () {return 0;} // requires explicit inlining
 ```
@@ -284,9 +262,9 @@ Set structure, union and class member variables to be aligned in n bytes
 
 struct test
 {
-    char m1;
-    double m4;
-    int m3;
+    char m1;
+    double m4;
+    int m3;
 };
 
 #pragma pack (pop) // Restore alignment state
@@ -332,7 +310,7 @@ void * memset (void *, int, size_t);
 ```c
 // c
 typedef struct Student {
-    int age;
+    int age;
 } S;
 ```
 
@@ -341,7 +319,7 @@ Equivalent to
 ```c
 // c
 struct Student {
-    int age;
+    int age;
 };
 
 typedef struct Student S;
@@ -362,7 +340,7 @@ That is, you can use `Student` or` struct Student`, as follows:
 ```cpp
 // cpp
 struct Student {
-    int age;
+    int age;
 };
 
 void f (Student me); // Correct, "struct" keyword can be omitted
@@ -372,7 +350,7 @@ void f (Student me); // Correct, "struct" keyword can be omitted
 
 ```cpp
 typedef struct Student {
-    int age;
+    int age;
 } S;
 
 void Student () {} // Correct, after definition "Student" only represents this function
@@ -380,9 +358,9 @@ void Student () {} // Correct, after definition "Student" only represents this f
 // void S () {} // Error, the symbol "S" has been defined as an alias of "struct Student"
 
 int main () {
-    Student ();
-    struct Student me; // or "S me";
-    return 0;
+    Student ();
+    struct Student me; // or "S me";
+    return 0;
 }
 ```
 
@@ -393,8 +371,8 @@ In general, struct is more suitable as an implementation of a data structure, an
 #### the difference
 
 * The most essential difference is the default access control
-    1. Default inherited access rights. The struct is public and the class is private.
-    2. struct as the realization body of the data structure, its default data access control is public, and class as the realization body of the object, its default member variable access control is private.
+    1. Default inherited access rights. The struct is public and the class is private.
+    2. struct as the realization body of the data structure, its default data access control is public, and class as the realization body of the object, its default member variable access control is private.
 
 ### union union
 
@@ -415,33 +393,33 @@ union use
 #include <iostream>
 
 union UnionTest {
-    UnionTest (): i (10) {};
-    int i;
-    double d;
+    UnionTest (): i (10) {};
+    int i;
+    double d;
 };
 
 static union {
-    int i;
-    double d;
+    int i;
+    double d;
 };
 
 int main () {
-    UnionTest u;
+    UnionTest u;
 
-    union {
-        int i;
-        double d;
-    };
+    union {
+        int i;
+        double d;
+    };
 
-    std :: cout << u.i << std :: endl; // output UnionTest 10
+    std :: cout << u.i << std :: endl; // output UnionTest 10
 
-    :: i = 20;
-    std :: cout << :: i << std :: endl; // output the global static anonymous union 20
+    :: i = 20;
+    std :: cout << :: i << std :: endl; // output the global static anonymous union 20
 
-    i = 30;
-    std :: cout << i << std :: endl; // output local anonymous union 30
+    i = 30;
+    std :: cout << i << std :: endl; // output local anonymous union 30
 
-    return 0;
+    return 0;
 }
 ```
 
@@ -481,26 +459,26 @@ void doB (B b) {}
 
 int main ()
 {
-	A a1 (1); // OK: direct initialization
-	A a2 = 1; // OK: copy initialization
-	A a3 {1}; // OK: direct list initialization
-	A a4 = {1}; // OK: initialization of the copy list
-	A a5 = (A) 1; // OK: Allow explicit conversion of static_cast
-	doA (1); // OK: Allow implicit conversion from int to A
-	if (a1); // OK: implicit conversion from A to bool using conversion function A :: operator bool ()
-	bool a6 (a1); // OK: implicit conversion from A to bool using conversion function A :: operator bool ()
-	bool a7 = a1; // OK: implicit conversion from A to bool using conversion function A :: operator bool ()
+	A a1 (1); 		// OK: direct initialization
+	A a2 = 1; 		// OK: copy initialization
+	A a3 {1}; 		// OK: direct list initialization
+	A a4 = {1}; 		// OK: initialization of the copy list
+	A a5 = (A) 1; 		// OK: Allow explicit conversion of static_cast
+	doA (1); 		// OK: Allow implicit conversion from int to A
+	if (a1); 		// OK: implicit conversion from A to bool using conversion function A :: operator bool ()
+	bool a6 (a1); 		// OK: implicit conversion from A to bool using conversion function A :: operator bool ()
+	bool a7 = a1; 		// OK: implicit conversion from A to bool using conversion function A :: operator bool ()
 	bool a8 = static_cast <bool> (a1); // OK: direct initialization of static_cast
 
-	B b1 (1); // OK: direct initialization
-	B b2 = 1; // Error: Objects whose constructor is explicitly modified cannot be copied and initialized
-	B b3 {1}; // OK: direct list initialization
-	B b4 = {1}; // Error: Objects whose constructors are explicitly decorated cannot be copied list initialization
-	B b5 = (B) 1; // OK: Allow explicit conversion of static_cast
-	doB (1); // Error: The object whose constructor is explicitly modified cannot be implicitly converted from int to B
-	if (b1); // OK: the object modified by the explicit conversion function B :: operator bool () can be converted from B to bool in context
-	bool b6 (b1); // OK: the conversion function B :: operator bool () is explicitly modified to be contextually convertible from B to bool
-	bool b7 = b1; // Error: the object modified by the explicit conversion function B :: operator bool () cannot be implicitly converted
+	B b1 (1); 		// OK: direct initialization
+	B b2 = 1; 		// Error: Objects whose constructor is explicitly modified cannot be copied and initialized
+	B b3 {1}; 		// OK: direct list initialization
+	B b4 = {1}; 		// Error: Objects whose constructors are explicitly decorated cannot be copied list initialization
+	B b5 = (B) 1; 		// OK: Allow explicit conversion of static_cast
+	doB (1); 		// Error: The object whose constructor is explicitly modified cannot be implicitly converted from int to B
+	if (b1); 		// OK: the object modified by the explicit conversion function B :: operator bool () can be converted from B to bool in context
+	bool b6 (b1); 		// OK: the conversion function B :: operator bool () is explicitly modified to be contextually convertible from B to bool
+	bool b7 = b1; 		// Error: the object modified by the explicit conversion function B :: operator bool () cannot be implicitly converted
 	bool b8 = static_cast <bool> (b1); // OK: static_cast for direct initialization
 
 return 0;
@@ -532,8 +510,8 @@ In C ++ 11, derived classes can reuse the constructors defined by their direct b
 ```cpp
 class Derived: Base {
 public:
-    using Base :: Base;
-    / * ... * /
+    using Base :: Base;
+    / * ... * /
 };
 ```
 
@@ -648,15 +626,15 @@ decltype use
 template <typename It>
 auto fcn (It beg, It end)-> decltype (* beg)
 {
-    // Processing sequence
-    return * beg; // return a reference to an element in the sequence
+    // Processing sequence
+    return * beg; // return a reference to an element in the sequence
 }
 // In order to use template parameter members, typename must be used
 template <typename It>
 auto fcn2 (It beg, It end)-> typename remove_reference <decltype (* beg)> :: type
 {
-    // Processing sequence
-    return * beg; // returns a copy of an element in the sequence
+    // Processing sequence
+    return * beg; // returns a copy of an element in the sequence
 }
 ```
 
@@ -707,17 +685,17 @@ initializer_list use
  
 template <class T>
 struct S {
-    std :: vector <T> v;
-    S (std :: initializer_list <T> l): v (l) {
-         std :: cout << "constructed with a" << l.size () << "-element list \ n";
-    }
-    void append (std :: initializer_list <T> l) {
-        v.insert (v.end (), l.begin (), l.end ());
-    }
-    std :: pair <const T *, std :: size_t> c_arr () const {
-        return {& v [0], v.size ()}; // Copy list initialization in return statement
-                                   // This does not use std :: initializer_list
-    }
+    std :: vector <T> v;
+    S (std :: initializer_list <T> l): v (l) {
+         std :: cout << "constructed with a" << l.size () << "-element list \ n";
+    }
+    void append (std :: initializer_list <T> l) {
+        v.insert (v.end (), l.begin (), l.end ());
+    }
+    std :: pair <const T *, std :: size_t> c_arr () const {
+        return {& v [0], v.size ()}; // Copy list initialization in return statement
+                                   // This does not use std :: initializer_list
+    }
 };
  
 template <typename T>
@@ -725,29 +703,29 @@ void templated_fn (T) {}
  
 int main ()
 {
-    S <int> s = {1, 2, 3, 4, 5}; // copy initialization
-    s.append ({6, 7, 8}); // List initialization in function call
+    S <int> s = {1, 2, 3, 4, 5}; // copy initialization
+    s.append ({6, 7, 8}); // List initialization in function call
  
-    std :: cout << "The vector size is now" << s.c_arr (). second << "ints: \ n";
+    std :: cout << "The vector size is now" << s.c_arr (). second << "ints: \ n";
  
-    for (auto n: s.v)
-        std :: cout << n << '';
-    std :: cout << '\ n';
+    for (auto n: s.v)
+        std :: cout << n << '';
+    std :: cout << '\ n';
  
-    std :: cout << "Range-for over brace-init-list: \ n";
+    std :: cout << "Range-for over brace-init-list: \ n";
  
-    for (int x: {-1, -2, -3}) // auto rules make this range for work
-        std :: cout << x << '';
-    std :: cout << '\ n';
+    for (int x: {-1, -2, -3}) // auto rules make this range for work
+        std :: cout << x << '';
+    std :: cout << '\ n';
  
-    auto al = {10, 11, 12}; // special rules for auto
+    auto al = {10, 11, 12}; // special rules for auto
  
-    std :: cout << "The list bound to auto has size () =" << al.size () << '\ n';
+    std :: cout << "The list bound to auto has size () =" << al.size () << '\ n';
  
 // templated_fn ({1, 2, 3}); // compilation error! "{1, 2, 3}" is not an expression,
-                             // It has no type, so T cannot be derived
-    templated_fn <std :: initializer_list <int >> ({1, 2, 3}); // OK
-    templated_fn <std :: vector <int >> ({1, 2, 3}); // also OK
+                             // It has no type, so T cannot be derived
+    templated_fn <std :: initializer_list <int >> ({1, 2, 3}); // OK
+    templated_fn <std :: vector <int >> ({1, 2, 3}); // also OK
 }
 ```
 
@@ -755,7 +733,7 @@ int main ()
 
 Object-oriented programming (OOP) is a paradigm of programming with object concepts, and it is also an abstract policy for program development.
 
-! [Object Oriented Features] (https://raw.githubusercontent.com/huihut/interview/master/images/Basic Object Oriented Features.png)
+![Object Oriented Features] (https://raw.githubusercontent.com/mihir3445/interview/master/images/Basic Object Oriented Features.png)
 
 Three characteristics of object-oriented-encapsulation, inheritance, polymorphism
 
@@ -776,10 +754,10 @@ Encapsulate objective things into abstract classes, and the class can operate it
 * Multi-state, that is, multiple states (forms). In simple terms, we can define polymorphism as the ability to display messages in multiple forms.
 * Polymorphism is based on encapsulation and inheritance.
 * C ++ polymorphic classification and implementation:
-     1. Overload polymorphism (Ad-hoc Polymorphism, compile time): function overloading, operator overloading
-     2. Subtype Polymorphism (Runtime): virtual function
-     3. Parameter polymorphism (Parametric Polymorphism, compile time): class template, function template
-     4. Forced polymorphism (Coercion Polymorphism, compile time / run time): basic type conversion, custom type conversion
+     1. Overload polymorphism (Ad-hoc Polymorphism, compile time): function overloading, operator overloading
+     2. Subtype Polymorphism (Runtime): virtual function
+     3. Parameter polymorphism (Parametric Polymorphism, compile time): class template, function template
+     4. Forced polymorphism (Coercion Polymorphism, compile time / run time): basic type conversion, custom type conversion
 
 > [The Four Polymorphisms in C++](https://catonmat.net/cpp-polymorphism)
 
@@ -791,8 +769,8 @@ Function overloading
 class A
 {
 public:
-    void do (int a);
-    void do (int a, int b);
+    void do (int a);
+    void do (int a, int b);
 };
 ```
 
@@ -805,7 +783,7 @@ public:
 * Ordinary functions (non-class member functions) cannot be virtual functions
 * Static functions (static) cannot be virtual functions
 * The constructor cannot be a virtual function (because when calling the constructor, the virtual table pointer is not in the memory space of the object, the virtual table pointer must be formed after the constructor call is completed)
-* The inline function cannot be a virtual function when expressing polymorphism. For explanation, see: [Can a virtual function (virtual) be an inline function (inline)? ] (https://github.com/huihut/interview#%E8%99%9A%E5%87%BD%E6%95%B0virtual%E5%8F%AF%E4%BB%A5%E6%98%AF % E5% 86% 85% E8% 81% 94% E5% 87% BD% E6% 95% B0inline% E5% 90% 97)
+* The inline function cannot be a virtual function when expressing polymorphism. For explanation, see: [Can a virtual function (virtual) be an inline function (inline)? ] (https://github.com/mihir3445/interview#%E8%99%9A%E5%87%BD%E6%95%B0virtual%E5%8F%AF%E4%BB%A5%E6%98%AF % E5% 86% 85% E8% 81% 94% E5% 87% BD% E6% 95% B0inline% E5% 90% 97)
 
 Dynamic polymorphism usage
 
@@ -813,35 +791,35 @@ Dynamic polymorphism usage
 class Shape // shape class
 {
 public:
-    virtual double calcArea ()
-    {
-        ...
-    }
-    virtual ~ Shape ();
+    virtual double calcArea ()
+    {
+        ...
+    }
+    virtual ~ Shape ();
 };
 class Circle: public Shape // circle class
 {
 public:
-    virtual double calcArea ();
-    ...
+    virtual double calcArea ();
+    ...
 };
 class Rect: public Shape // rectangle class
 {
 public:
-    virtual double calcArea ();
-    ...
+    virtual double calcArea ();
+    ...
 };
 int main ()
 {
-    Shape * shape1 = new Circle (4.0);
-    Shape * shape2 = new Rect (5.0, 6.0);
-    shape1-> calcArea (); // Call the method in the circle class
-    shape2-> calcArea (); // Call the method in the rectangle class
-    delete shape1;
-    shape1 = nullptr;
-    delete shape2;
-    shape2 = nullptr;
-    return 0;
+    Shape * shape1 = new Circle (4.0);
+    Shape * shape2 = new Rect (5.0, 6.0);
+    shape1-> calcArea (); // Call the method in the circle class
+    shape2-> calcArea (); // Call the method in the rectangle class
+    delete shape1;
+    shape1 = nullptr;
+    delete shape2;
+    shape2 = nullptr;
+    return 0;
 }
 ```
 
@@ -855,23 +833,23 @@ Use of virtual destructor
 class Shape
 {
 public:
-    Shape (); // Constructor cannot be a virtual function
-    virtual double calcArea ();
-    virtual ~ Shape (); // Virtual destructor
+    Shape (); // Constructor cannot be a virtual function
+    virtual double calcArea ();
+    virtual ~ Shape (); // Virtual destructor
 };
 class Circle: public Shape // circle class
 {
 public:
-    virtual double calcArea ();
-    ...
+    virtual double calcArea ();
+    ...
 };
 int main ()
 {
-    Shape * shape1 = new Circle (4.0);
-    shape1-> calcArea ();
-    delete shape1; // Because Shape has a virtual destructor, when delete releases the memory, first call the subclass destructor and then call the base class destructor to prevent memory leaks.
-    shape1 = NULL;
-    return 0;
+    Shape * shape1 = new Circle (4.0);
+    shape1-> calcArea ();
+    delete shape1; // Because Shape has a virtual destructor, when delete releases the memory, first call the subclass destructor and then call the base class destructor to prevent memory leaks.
+    shape1 = NULL;
+    return 0;
 }
 ```
 
@@ -912,12 +890,12 @@ In fact, vbptr refers to the virtual base table pointer (virtual base table poin
 
 * Similarities: both use virtual pointers (both occupy the storage space of the class) and virtual tables (neither occupy the storage space of the class)
 * the difference:
-    * Virtual inheritance
-        * The virtual base class still exists in the inherited class and only takes up storage space
-        * The virtual base class table stores the offset of the virtual base class relative to the directly inherited class
-    * Virtual function
-        * Virtual functions do not occupy storage space
-        * The virtual function table stores the virtual function address
+    * Virtual inheritance
+        * The virtual base class still exists in the inherited class and only takes up storage space
+        * The virtual base class table stores the offset of the virtual base class relative to the directly inherited class
+    * Virtual function
+        * Virtual functions do not occupy storage space
+        * The virtual function table stores the virtual function address
 
 ### Template classes, member templates, virtual functions
 
@@ -929,10 +907,10 @@ In fact, vbptr refers to the virtual base table pointer (virtual base table poin
 * Abstract class: class containing pure virtual functions
 * Interface class: an abstract class containing only pure virtual functions
 * Aggregation class: users can directly access its members, and has a special form of initialization syntax. Meet the following characteristics:
-    * All members are public
-    * No constructor is defined
-    * No class initialization
-    * No base class, no virtual function
+    * All members are public
+    * No constructor is defined
+    * No class initialization
+    * No base class, no virtual function
 
 ### Memory allocation and management
 
@@ -976,9 +954,9 @@ Apply for memory and confirm whether the application is successful
 ```cpp
 int main ()
 {
-    T * t = new T (); // Memory allocation first, then constructor
-    delete t; // Destructor first, then release memory
-    return 0;
+    T * t = new T (); // Memory allocation first, then constructor
+    delete t; // Destructor first, then release memory
+    return 0;
 }
 ```
 
@@ -1114,10 +1092,10 @@ bad_cast use
 
 ```cpp
 try {
-    Circle & ref_circle = dynamic_cast <Circle &> (ref_shape);
+    Circle & ref_circle = dynamic_cast <Circle &> (ref_shape);
 }
 catch (bad_cast b) {
-    cout << "Caught:" << b.what ();
+    cout << "Caught:" << b.what ();
 }
 ```
 
@@ -1148,50 +1126,50 @@ using namespace std;
 class Flyable // can fly
 {
 public:
-    virtual void takeoff () = 0; // take off
-    virtual void land () = 0; // landing
+    virtual void takeoff () = 0; // take off
+    virtual void land () = 0; // landing
 };
 class Bird: public Flyable // bird
 {
 public:
-    void foraging () {...} // foraging
-    virtual void takeoff () {...}
-    virtual void land () {...}
-    virtual ~ Bird () {}
+    void foraging () {...} // foraging
+    virtual void takeoff () {...}
+    virtual void land () {...}
+    virtual ~ Bird () {}
 };
 class Plane: public Flyable // aircraft
 {
 public:
-    void carry () {...} // transport
-    virtual void takeoff () {...}
-    virtual void land () {...}
+    void carry () {...} // transport
+    virtual void takeoff () {...}
+    virtual void land () {...}
 };
 
 class type_info
 {
 public:
-    const char * name () const;
-    bool operator == (const type_info & rhs) const;
-    bool operator! = (const type_info & rhs) const;
-    int before (const type_info & rhs) const;
-    virtual ~ type_info ();
+    const char * name () const;
+    bool operator == (const type_info & rhs) const;
+    bool operator! = (const type_info & rhs) const;
+    int before (const type_info & rhs) const;
+    virtual ~ type_info ();
 private:
-    ...
+    ...
 };
 
 void doSomething (Flyable * obj) // do something
 {
-    obj-> takeoff ();
+    obj-> takeoff ();
 
-    cout << typeid (* obj) .name () << endl; // Output incoming object type ("class Bird" or "class Plane")
+    cout << typeid (* obj) .name () << endl; // Output incoming object type ("class Bird" or "class Plane")
 
-    if (typeid (* obj) == typeid (Bird)) // determine the object type
-    {
-        Bird * bird = dynamic_cast <Bird *> (obj); // object conversion
-        bird-> foraging ();
-    }
+    if (typeid (* obj) == typeid (Bird)) // determine the object type
+    {
+        Bird * bird = dynamic_cast <Bird *> (obj); // object conversion
+        bird-> foraging ();
+    }
 
-    obj-> land ();
+    obj-> land ();
 }
 
 int main () {
@@ -1298,35 +1276,35 @@ return 0;
 
 ### STL index
 
-[STL Method Meaning Index] (https://github.com/huihut/interview/tree/master/STL)
+[STL Method Meaning Index] (https://github.com/mihir3445/interview/tree/master/STL)
 
 ### STL container
 
 Container | Underlying data structure | Time complexity | Orderless | Non-repeatable | Other
 --- | --- | --- | --- | --- | ---
-[array] (https://github.com/huihut/interview/tree/master/STL#array) | array | random read change O (1) | unordered | repeatable | support random access
-[vector] (https://github.com/huihut/interview/tree/master/STL#vector) | array | random read modification, tail insertion, tail deletion O (1) <br/> head insertion, head Delete O (n) | Unordered | Repeatable | Support random access
-[deque] (https://github.com/huihut/interview/tree/master/STL#deque) | Double-ended queue | Head-to-tail insertion, head-to-tail deletion O (1) | Unordered | Repeatable | One central control + Multiple buffers, support fast addition and deletion at the beginning and end, support random access
-[forward_list] (https://github.com/huihut/interview/tree/master/STL#forward_list) | Single linked list | insert, delete O (1) | unordered | repeatable | random access is not supported
-[list] (https://github.com/huihut/interview/tree/master/STL#list) | Doubly linked list | Insert, delete O (1) | Unordered | Repeatable | Random access is not supported
-[stack] (https://github.com/huihut/interview/tree/master/STL#stack) | deque / list | top insert, top delete O (1) | unordered | repeatable | deque or list closed head Open end, the reason for not using vector should be limited capacity size, time-consuming expansion
-[queue] (https://github.com/huihut/interview/tree/master/STL#queue) | deque / list | tail insertion, head deletion O (1) | unordered | repeatable | deque or list closed The head end is open, the reason for not using the vector should be that the capacity is limited, and the expansion takes time
-[priority_queue] (https://github.com/huihut/interview/tree/master/STL#priority_queue) | vector + max-heap | Insert, delete O (log <sub> 2 </ sub> n) | Ordered | Repeatable | vector container + heap processing rules
-[set] (https://github.com/huihut/interview/tree/master/STL#set) | Red Black Tree | Insert, Delete, Find O (log <sub> 2 </ sub> n) | Ordered | Not repeatable |
-[multiset] (https://github.com/huihut/interview/tree/master/STL#multiset) | Red Black Tree | Insert, Delete, Find O (log <sub> 2 </ sub> n) | Ordered | Repeatable |
-[map] (https://github.com/huihut/interview/tree/master/STL#map) | Red Black Tree | Insert, Delete, Find O (log <sub> 2 </ sub> n) | Ordered | Not repeatable |
-[multimap] (https://github.com/huihut/interview/tree/master/STL#multimap) | Red Black Tree | Insert, Delete, Find O (log <sub> 2 </ sub> n) | Ordered | Repeatable |
-[unordered_set] (https://github.com/huihut/interview/tree/master/STL#unordered_set) | Hash Table | Insert, Delete, Find O (1) Worst O (n) | Unordered | Not Repeatable |
-[unordered_multiset] (https://github.com/huihut/interview/tree/master/STL#unordered_multiset) | Hash table | insert, delete, find O (1) worst O (n) | unordered | repeatable |
-[unordered_map] (https://github.com/huihut/interview/tree/master/STL#unordered_map) | Hash Table | Insert, Delete, Find O (1) Worst O (n) | Unordered | Not Repeatable |
-[unordered_multimap] (https://github.com/huihut/interview/tree/master/STL#unordered_multimap) | Hash Table | Insert, Delete, Find O (1) Worst O (n) | Unordered | Repeatable |
+[array] (https://github.com/mihir3445/interview/tree/master/STL#array) | array | random read change O (1) | unordered | repeatable | support random access
+[vector] (https://github.com/mihir3445/interview/tree/master/STL#vector) | array | random read modification, tail insertion, tail deletion O (1) <br/> head insertion, head Delete O (n) | Unordered | Repeatable | Support random access
+[deque] (https://github.com/mihir3445/interview/tree/master/STL#deque) | Double-ended queue | Head-to-tail insertion, head-to-tail deletion O (1) | Unordered | Repeatable | One central control + Multiple buffers, support fast addition and deletion at the beginning and end, support random access
+[forward_list] (https://github.com/mihir3445/interview/tree/master/STL#forward_list) | Single linked list | insert, delete O (1) | unordered | repeatable | random access is not supported
+[list] (https://github.com/mihir3445/interview/tree/master/STL#list) | Doubly linked list | Insert, delete O (1) | Unordered | Repeatable | Random access is not supported
+[stack] (https://github.com/mihir3445/interview/tree/master/STL#stack) | deque / list | top insert, top delete O (1) | unordered | repeatable | deque or list closed head Open end, the reason for not using vector should be limited capacity size, time-consuming expansion
+[queue] (https://github.com/mihir3445/interview/tree/master/STL#queue) | deque / list | tail insertion, head deletion O (1) | unordered | repeatable | deque or list closed The head end is open, the reason for not using the vector should be that the capacity is limited, and the expansion takes time
+[priority_queue] (https://github.com/mihir3445/interview/tree/master/STL#priority_queue) | vector + max-heap | Insert, delete O (log <sub> 2 </sub> n) | Ordered | Repeatable | vector container + heap processing rules
+[set] (https://github.com/mihir3445/interview/tree/master/STL#set) | Red Black Tree | Insert, Delete, Find O (log <sub> 2 </sub> n) | Ordered | Not repeatable |
+[multiset] (https://github.com/mihir3445/interview/tree/master/STL#multiset) | Red Black Tree | Insert, Delete, Find O (log <sub> 2 </sub> n) | Ordered | Repeatable |
+[map] (https://github.com/mihir3445/interview/tree/master/STL#map) | Red Black Tree | Insert, Delete, Find O (log <sub> 2 </sub> n) | Ordered | Not repeatable |
+[multimap] (https://github.com/mihir3445/interview/tree/master/STL#multimap) | Red Black Tree | Insert, Delete, Find O (log <sub> 2 </sub> n) | Ordered | Repeatable |
+[unordered_set] (https://github.com/mihir3445/interview/tree/master/STL#unordered_set) | Hash Table | Insert, Delete, Find O (1) Worst O (n) | Unordered | Not Repeatable |
+[unordered_multiset] (https://github.com/mihir3445/interview/tree/master/STL#unordered_multiset) | Hash table | insert, delete, find O (1) worst O (n) | unordered | repeatable |
+[unordered_map] (https://github.com/mihir3445/interview/tree/master/STL#unordered_map) | Hash Table | Insert, Delete, Find O (1) Worst O (n) | Unordered | Not Repeatable |
+[unordered_multimap] (https://github.com/mihir3445/interview/tree/master/STL#unordered_multimap) | Hash Table | Insert, Delete, Find O (1) Worst O (n) | Unordered | Repeatable |
 
 ### STL algorithm
 
 Algorithm | Underlying Algorithm | Time Complexity | Non-Repeatable
 --- | --- | --- | ---
 [find] (http://www.cplusplus.com/reference/algorithm/find/) | Sequential search | O (n) | Repeatable
-[sort] (https://github.com/gcc-mirror/gcc/blob/master/libstdc++-v3/include/bits/stl_algo.h#L4808) | [introspective sorting] (https: //en.wikipedia .org / wiki / Introsort) | O (n * log <sub> 2 </ sub> n) | Repeatable
+[sort] (https://github.com/gcc-mirror/gcc/blob/master/libstdc++-v3/include/bits/stl_algo.h#L4808) | [introspective sorting] (https: //en.wikipedia .org / wiki / Introsort) | O (n * log <sub> 2 </sub> n) | Repeatable
 
 ## 〽️ Data structure
 
@@ -1347,7 +1325,7 @@ int increment;
 } SqStack;
 ```
 
-![](https://raw.githubusercontent.com/huihut/interview/master/images/SqStack.png)
+![](https://raw.githubusercontent.com/mihir3445/interview/master/images/SqStack.png)
 
 #### Queue (Sequence Queue)
 
@@ -1366,7 +1344,7 @@ int maxSize;
 
 Acyclic queue picture
 
-![](https://raw.githubusercontent.com/huihut/interview/master/images/SqQueue.png)
+![](https://raw.githubusercontent.com/mihir3445/interview/master/images/SqQueue.png)
 
 `SqQueue.rear ++`
 
@@ -1374,7 +1352,7 @@ Acyclic queue picture
 
 Circular queue picture
 
-![](https://raw.githubusercontent.com/huihut/interview/master/images/SqLoopStack.png)
+![](https://raw.githubusercontent.com/mihir3445/interview/master/images/SqLoopStack.png)
 
 `SqQueue.rear = (SqQueue.rear + 1)% SqQueue.maxSize`
 
@@ -1393,7 +1371,7 @@ int increment;
 } SqList;
 ```
 
-![](https://raw.githubusercontent.com/huihut/interview/master/images/SqList.png)
+![](https://raw.githubusercontent.com/mihir3445/interview/master/images/SqList.png)
 
 
 ### Chain structure
@@ -1406,8 +1384,8 @@ Chained data structure
 
 ```cpp
 typedef struct LNode {
-    ElemType data;
-    struct LNode * next;
+    ElemType data;
+    struct LNode * next;
 } LNode, * LinkList;
 ```
 
@@ -1415,7 +1393,7 @@ typedef struct LNode {
 
 Chain queue picture
 
-![](https://raw.githubusercontent.com/huihut/interview/master/images/LinkQueue.png)
+![](https://raw.githubusercontent.com/mihir3445/interview/master/images/LinkQueue.png)
 
 #### Chain representation of linear table
 
@@ -1423,7 +1401,7 @@ Chain queue picture
 
 Singly linked list pictures
 
-![](https://raw.githubusercontent.com/huihut/interview/master/images/LinkList.png)
+![](https://raw.githubusercontent.com/mihir3445/interview/master/images/LinkList.png)
 
 ##### Doubly linked list (Du-Link-List)
 
@@ -1457,9 +1435,9 @@ Hash function: `H (key): K-> D, key ∈ K`
 
 * Chain address method: use the same link to link with the same key
 * Open addressing method
-    * Linear detection method: the same key-> put it in the next position of key, `Hi = (H (key) + i)% m`
-    * Secondary detection method: the same key-> put in `Di = 1 ^ 2, -1 ^ 2, ..., ± (k) ^ 2, (k <= m / 2)`
-    * Random detection method: `H = (H (key) + pseudo-random number)% m`
+    * Linear detection method: the same key-> put it in the next position of key, `Hi = (H (key) + i)% m`
+    * Secondary detection method: the same key-> put in `Di = 1 ^ 2, -1 ^ 2, ..., ± (k) ^ 2, (k <= m / 2)`
+    * Random detection method: `H = (H (key) + pseudo-random number)% m`
 
 #### Linear probing hash table data structure
 
@@ -1491,8 +1469,8 @@ The function calls itself directly or indirectly
 #### Recursion and divide and conquer
 
 * Divide and conquer
-    * Breakdown of the problem
-    * Decomposition of problem scale
+    * Breakdown of the problem
+    * Decomposition of problem scale
 * Search in half (recursive)
 * Merge sort (recursive)
 * Quick sort (recursive)
@@ -1514,17 +1492,17 @@ Storage representation and picture of head and tail linked list of generalized t
 typedef enum {ATOM, LIST} ElemTag;
 // ATOM == 0: atom, LIST == 1: child table
 typedef struct GLNode {
-    ElemTag tag;
-    // Common part, used to distinguish between atomic nodes and table nodes
-    union {
-        // Joint part of atomic node and table node
-        AtomType atom;
-        // atom is the range of atomic nodes, AtomType is defined by the user
-        struct {
-            struct GLNode * hp, * tp;
-        } ptr;
-        // ptr is the pointer field of the table node, prt.hp and ptr.tp point to the head and tail of the table respectively
-    } a;
+    ElemTag tag;
+    // Common part, used to distinguish between atomic nodes and table nodes
+    union {
+        // Joint part of atomic node and table node
+        AtomType atom;
+        // atom is the range of atomic nodes, AtomType is defined by the user
+        struct {
+            struct GLNode * hp, * tp;
+        } ptr;
+        // ptr is the pointer field of the table node, prt.hp and ptr.tp point to the head and tail of the table respectively
+    } a;
 } * GList, GLNode;
 ```
 
@@ -1539,15 +1517,15 @@ Extended linear linked list storage representation and pictures
 typedef enum {ATOM, LIST} ElemTag;
 // ATOM == 0: atom, LIST == 1: child table
 typedef struct GLNode1 {
-    ElemTag tag;
-    // Common part, used to distinguish between atomic nodes and table nodes
-    union {
-        // Joint part of atomic node and table node
-        AtomType atom; // Value range of atomic node
-        struct GLNode1 * hp; // Header pointer of table node
-    } a;
-    struct GLNode1 * tp;
-    // Equivalent to next in a linear list, pointing to the next element node
+    ElemTag tag;
+    // Common part, used to distinguish between atomic nodes and table nodes
+    union {
+        // Joint part of atomic node and table node
+        AtomType atom; // Value range of atomic node
+        struct GLNode1 * hp; // Header pointer of table node
+    } a;
+    struct GLNode1 * tp;
+    // Equivalent to next in a linear list, pointing to the next element node
 } * GList1, GLNode1;
 ```
 
@@ -1559,14 +1537,14 @@ typedef struct GLNode1 {
 
 #### Nature
 
-1. Non-empty binary tree at level i has at most 2 <sup> (i-1) </ sup> nodes (i> = 1)
-2. Binary tree of depth k has at most 2 <sup> k </ sup>-1 node (k> = 1)
-3. The number of nodes with degree 0 is n <sub> 0 </ sub>, and the number of nodes with degree 2 is n <sub> 2 </ sub>, then n <sub> 0 </ sub> = n <sub > 2 </ sub> + 1
-4. The depth of a complete binary tree with n nodes k = ⌊ log <sub> 2 </ sub> (n) ⌋ + 1
+1. Non-empty binary tree at level i has at most 2 <sup> (i-1) </sup> nodes (i> = 1)
+2. Binary tree of depth k has at most 2 <sup> k </sup>-1 node (k> = 1)
+3. The number of nodes with degree 0 is n <sub> 0 </sub>, and the number of nodes with degree 2 is n <sub> 2 </sub>, then n <sub> 0 </sub> = n <sub > 2 </sub> + 1
+4. The depth of a complete binary tree with n nodes k = ⌊ log <sub> 2 </sub> (n) ⌋ + 1
 5. For the node numbered i (1 <= i <= n) in the complete binary tree with n nodes
-    1. If i = 1, the root, otherwise the parent is ⌊ i / 2 ⌋
-    2. If 2i> n, the i node has no left child, otherwise the child number is 2i
-    3. If 2i + 1> n, the i node has no right child, otherwise the child number is 2i + 1
+    1. If i = 1, the root, otherwise the parent is ⌊ i / 2 ⌋
+    2. If 2i> n, the i node has no left child, otherwise the child number is 2i
+    3. If 2i + 1> n, the i node has no right child, otherwise the child number is 2i + 1
 
 #### Storage structure
 
@@ -1575,8 +1553,8 @@ Binary tree data structure
 ```cpp
 typedef struct BiTNode
 {
-    TElemType data;
-    struct BiTNode * lchild, * rchild;
+    TElemType data;
+    struct BiTNode * lchild, * rchild;
 } BiTNode, * BiTree;
 ```
 
@@ -1603,15 +1581,15 @@ Binary tree chain storage pictures
 
 * Full binary tree
 * Complete binary tree (heap)
-    * Large top pile: root> = left && root> = right
-    * Small top heap: root <= left && root <= right
+    * Large top pile: root> = left && root> = right
+    * Small top heap: root <= left && root <= right
 * Binary search tree (binary sorting tree): left <root <right
 * Balanced binary tree (AVL tree): | Left subtree tree height-Right subtree tree height | <= 1
 * The smallest unbalanced tree: the subtree where the balanced binary tree inserts a new node to cause the unbalance: adjustment:
-    * LL type: the left child of the root rotates right
-    * RR type: the right child of the root is left-handed
-    * LR type: the left child of the root turns left and then right
-    * RL type: the left child of the right child, right-handed first, then left-handed
+    * LL type: the left child of the root rotates right
+    * RR type: the right child of the root is left-handed
+    * LR type: the left child of the root turns left and then right
+    * RL type: the left child of the right child, right-handed first, then left-handed
 
 ### Other trees and forests
 
@@ -1679,7 +1657,7 @@ Adjustment:
 
 B tree, B + tree pictures
 
-! [B tree (B-tree), B + tree (B + -tree)] (https://i.stack.imgur.com/l6UyF.png)
+![B tree (B-tree), B + tree (B + -tree)] (https://i.stack.imgur.com/l6UyF.png)
 
 ##### Features
 
@@ -1725,16 +1703,16 @@ An octree, or octree, is a tree-like data structure used to describe three-dimen
 
 Sorting Algorithm | Average Time Complexity | Worst Time Complexity | Space Complexity | Data Object Stability
 --- | --- | --- | --- | ---
-[Bubbling Sort] (Algorithm / BubbleSort.h) | O (n <sup> 2 </ sup>) | O (n <sup> 2 </ sup>) | O (1) | Stable
-[Select Sort] (Algorithm / SelectionSort.h) | O (n <sup> 2 </ sup>) | O (n <sup> 2 </ sup>) | O (1) | The array is unstable and the linked list is stable
-[Insert Sort] (Algorithm / InsertSort.h) | O (n <sup> 2 </ sup>) | O (n <sup> 2 </ sup>) | O (1) | Stable
-[Quick Sort] (Algorithm / QuickSort.h) | O (n * log <sub> 2 </ sub> n) | O (n <sup> 2 </ sup>) | O (log <sub> 2 </ sub> n) | unstable
-[Heap Sort] (Algorithm / HeapSort.cpp) | O (n * log <sub> 2 </ sub> n) | O (n * log <sub> 2 </ sub> n) | O (1) | No stable
-[Merge Sort] (Algorithm / MergeSort.h) | O (n * log <sub> 2 </ sub> n) | O (n * log <sub> 2 </ sub> n) | O (n) | Stable
-[Hill Sort] (Algorithm / ShellSort.h) | O (n * log <sup> 2 </ sup> n) | O (n <sup> 2 </ sup>) | O (1) | Unstable
+[Bubbling Sort] (Algorithm / BubbleSort.h) | O (n <sup> 2 </sup>) | O (n <sup> 2 </sup>) | O (1) | Stable
+[Select Sort] (Algorithm / SelectionSort.h) | O (n <sup> 2 </sup>) | O (n <sup> 2 </sup>) | O (1) | The array is unstable and the linked list is stable
+[Insert Sort] (Algorithm / InsertSort.h) | O (n <sup> 2 </sup>) | O (n <sup> 2 </sup>) | O (1) | Stable
+[Quick Sort] (Algorithm / QuickSort.h) | O (n * log <sub> 2 </sub> n) | O (n <sup> 2 </sup>) | O (log <sub> 2 </sub> n) | unstable
+[Heap Sort] (Algorithm / HeapSort.cpp) | O (n * log <sub> 2 </sub> n) | O (n * log <sub> 2 </sub> n) | O (1) | No stable
+[Merge Sort] (Algorithm / MergeSort.h) | O (n * log <sub> 2 </sub> n) | O (n * log <sub> 2 </sub> n) | O (n) | Stable
+[Hill Sort] (Algorithm / ShellSort.h) | O (n * log <sup> 2 </sup> n) | O (n <sup> 2 </sup>) | O (1) | Unstable
 [Count Sort] (Algorithm / CountSort.cpp) | O (n + m) | O (n + m) | O (n + m) | Stable
 [Bucket Sorting] (Algorithm / BucketSort.cpp) | O (n) | O (n) | O (m) | Stable
-[Base Sorting] (Algorithm / RadixSort.h) | O (k * n) | O (n <sup> 2 </ sup>) | | Stable
+[Base Sorting] (Algorithm / RadixSort.h) | O (k * n) | O (n <sup> 2 </sup>) | | Stable
 
 > * Are arranged from small to large
 > * k: represents the number of "digits" in the value
@@ -1747,21 +1725,21 @@ Sorting Algorithm | Average Time Complexity | Worst Time Complexity | Space Comp
 Search Algorithm | Average Time Complexity | Space Complexity | Search Condition
 --- | --- | --- | ---
 [Sequential Search] (Algorithm / SequentialSearch.h) | O (n) | O (1) | Unordered or Ordered
-[Binary search (half search)] (Algorithm / BinarySearch.h) | O (log <sub> 2 </ sub> n) | O (1) | Ordered
-[Interpolation search] (Algorithm / InsertionSearch.h) | O (log <sub> 2 </ sub> (log <sub> 2 </ sub> n)) | O (1) | Ordered
-[Fibonacci Search] (Algorithm / FibonacciSearch.cpp) | O (log <sub> 2 </ sub> n) | O (1) | Ordered
+[Binary search (half search)] (Algorithm / BinarySearch.h) | O (log <sub> 2 </sub> n) | O (1) | Ordered
+[Interpolation search] (Algorithm / InsertionSearch.h) | O (log <sub> 2 </sub> (log <sub> 2 </sub> n)) | O (1) | Ordered
+[Fibonacci Search] (Algorithm / FibonacciSearch.cpp) | O (log <sub> 2 </sub> n) | O (1) | Ordered
 [Hash Search] (DataStructure / HashTable.cpp) | O (1) | O (n) | Unordered or Ordered
-[Binary Search Tree (Binary Search Tree Search)] (Algorithm / BSTSearch.h) | O (log <sub> 2 </ sub> n) | |
-[红黑 树] (DataStructure / RedBlackTree.cpp) | O (log <sub> 2 </ sub> n) | |
-2-3 tree | O (log <sub> 2 </ sub> n-log <sub> 3 </ sub> n) | |
-B tree / B + tree | O (log <sub> 2 </ sub> n) | |
+[Binary Search Tree (Binary Search Tree Search)] (Algorithm / BSTSearch.h) | O (log <sub> 2 </sub> n) | |
+[红黑 树] (DataStructure / RedBlackTree.cpp) | O (log <sub> 2 </sub> n) | |
+2-3 tree | O (log <sub> 2 </sub> n-log <sub> 3 </sub> n) | |
+B tree / B + tree | O (log <sub> 2 </sub> n) | |
 
 ### Graph search algorithm
 
 Graph search algorithm | data structure | traversal time complexity | space complexity
 --- | --- | --- | ---
-[BFS breadth first search] (https://en.wikipedia.org/wiki/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C% E7% B4% A2) | Adjacency matrix <br/> Adjacency list | O (\ | v \ | <sup> 2 </ sup>) <br/> O (\ | v \ | + \ | E \ |) | O (\ | v \ | <sup> 2 </ sup>) <br/> O (\ | v \ | + \ | E \ |)
-[DFS Depth First Search] (https://zh.wikipedia.org/wiki/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C% E7% B4% A2) | Adjacency matrix <br/> Adjacency list | O (\ | v \ | <sup> 2 </ sup>) <br/> O (\ | v \ | + \ | E \ |) | O (\ | v \ | <sup> 2 </ sup>) <br/> O (\ | v \ | + \ | E \ |)
+[BFS breadth first search] (https://en.wikipedia.org/wiki/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C% E7% B4% A2) | Adjacency matrix <br/> Adjacency list | O (\ | v \ | <sup> 2 </sup>) <br/> O (\ | v \ | + \ | E \ |) | O (\ | v \ | <sup> 2 </sup>) <br/> O (\ | v \ | + \ | E \ |)
+[DFS Depth First Search] (https://zh.wikipedia.org/wiki/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C% E7% B4% A2) | Adjacency matrix <br/> Adjacency list | O (\ | v \ | <sup> 2 </sup>) <br/> O (\ | v \ | + \ | E \ |) | O (\ | v \ | <sup> 2 </sup>) <br/> O (\ | v \ | + \ | E \ |)
 
 ### Other algorithms
 
@@ -1814,47 +1792,47 @@ For threadless systems:
 #### Communication methods between processes and their advantages and disadvantages
 
 * Pipeline (PIPE)
-    * Famous pipes: a half-duplex communication method that allows communication between unrelated processes
-        * Advantages: can achieve communication between processes of arbitrary relationship
-        * Disadvantages:
-            1. Long-term storage in the system, improper use is prone to errors
-            2. Limited buffer
-    * Anonymous pipes: a half-duplex communication method, which can only be used between processes that are related (parent-child process)
-        * Advantages: simple and convenient
-        * Disadvantages:
-            1. Limited to one-way communication
-            2. Can only be created between its processes and its related processes
-            3. Limited buffer
+    * Famous pipes: a half-duplex communication method that allows communication between unrelated processes
+        * Advantages: can achieve communication between processes of arbitrary relationship
+        * Disadvantages:
+            1. Long-term storage in the system, improper use is prone to errors
+            2. Limited buffer
+    * Anonymous pipes: a half-duplex communication method, which can only be used between processes that are related (parent-child process)
+        * Advantages: simple and convenient
+        * Disadvantages:
+            1. Limited to one-way communication
+            2. Can only be created between its processes and its related processes
+            3. Limited buffer
 * Semaphore: a counter that can be used to control multiple threads' access to shared resources
-    * Pros: Can synchronize processes
-    * Disadvantages: limited semaphore
+    * Pros: Can synchronize processes
+    * Disadvantages: limited semaphore
 * Signal (Signal): a more complex communication method, used to notify the receiving process that an event has occurred
 * Message Queue (Message Queue): is a linked list of messages, stored in the kernel and identified by the message queue identifier
-    * Advantages: Can achieve communication between any process, and achieve synchronization between message sending and receiving through system call functions, without considering synchronization issues, convenient
-    * Disadvantages: copying information requires additional CPU time, not suitable for large amounts of information or frequent operations
+    * Advantages: Can achieve communication between any process, and achieve synchronization between message sending and receiving through system call functions, without considering synchronization issues, convenient
+    * Disadvantages: copying information requires additional CPU time, not suitable for large amounts of information or frequent operations
 * Shared memory (Shared Memory): Map a section of memory that can be accessed by other processes. This shared memory is created by one process, but multiple processes can access it
-    * Advantages: no need to copy, fast, large amount of information
-    * Disadvantages:
-        1. Communication is achieved by directly attaching the shared space buffer to the virtual address space of the process, so the synchronization of read and write operations between processes
-        2. Use the memory buffer to directly exchange information. The entity of the memory exists in the computer and can only be shared by many processes in the same computer system, which is not convenient for network communication.
+    * Advantages: no need to copy, fast, large amount of information
+    * Disadvantages:
+        1. Communication is achieved by directly attaching the shared space buffer to the virtual address space of the process, so the synchronization of read and write operations between processes
+        2. Use the memory buffer to directly exchange information. The entity of the memory exists in the computer and can only be shared by many processes in the same computer system, which is not convenient for network communication.
 * Socket (Socket): can be used for process communication between different computers
-    * Advantages:
-        1. The transmission data is byte level, the transmission data can be customized, the data volume is small and the efficiency is high
-        2. Short data transmission time and high performance
-        3. Suitable for real-time information interaction between client and server
-        4. Can be encrypted, strong data security
-    * Disadvantages: need to analyze the transmitted data and convert it into application-level data.
+    * Advantages:
+        1. The transmission data is byte level, the transmission data can be customized, the data volume is small and the efficiency is high
+        2. Short data transmission time and high performance
+        3. Suitable for real-time information interaction between client and server
+        4. Can be encrypted, strong data security
+    * Disadvantages: need to analyze the transmitted data and convert it into application-level data.
 
 #### Communication method between threads
 
 * Lock mechanism: including mutex / mutex, reader-writer lock, spin lock, condition variable
-    * Mutexes / quantities (mutex): Provides an exclusive way to prevent data structures from being modified concurrently.
-    * Reader-writer lock: allows multiple threads to read shared data at the same time, and write operations are mutually exclusive.
-    * Spin locks (spin locks) are similar to mutex locks, all to protect shared resources. The mutex lock is when the resource is occupied and the applicant goes to sleep; while the spin lock cyclically detects whether the holder has released the lock.
-    * Condition variable (condition): You can block the process atomically until a certain condition is true. The test of the condition is carried out under the protection of the mutex. Condition variables are always used with mutex locks.
+    * Mutexes / quantities (mutex): Provides an exclusive way to prevent data structures from being modified concurrently.
+    * Reader-writer lock: allows multiple threads to read shared data at the same time, and write operations are mutually exclusive.
+    * Spin locks (spin locks) are similar to mutex locks, all to protect shared resources. The mutex lock is when the resource is occupied and the applicant goes to sleep; while the spin lock cyclically detects whether the holder has released the lock.
+    * Condition variable (condition): You can block the process atomically until a certain condition is true. The test of the condition is carried out under the protection of the mutex. Condition variables are always used with mutex locks.
 * Semaphore mechanism (Semaphore)
-    * Unnamed thread semaphore
-    * Name thread semaphore
+    * Unnamed thread semaphore
+    * Name thread semaphore
 * Signal mechanism (Signal): similar to signal processing between processes
 * Barrier (barrier): The barrier allows each thread to wait until all cooperating threads have reached a certain point, and then continue execution from that point.
 
@@ -1925,8 +1903,8 @@ Little endian | 78 | 56 | 34 | 12
 
 Big endian little endian pictures
 
-! [大端 序] (https://raw.githubusercontent.com/mihir3445/interview/master/images/CPU-Big-Endian.svg.png)
-! [Little Endian Order] (https://raw.githubusercontent.com/mihir3445/interview/master/images/CPU-Little-Endian.svg.png)
+![Big Endian Order] (https://raw.githubusercontent.com/mihir3445/interview/master/images/CPU-Big-Endian.svg.png)
+![Little Endian Order] (https://raw.githubusercontent.com/mihir3445/interview/master/images/CPU-Little-Endian.svg.png)
 
 ##### Judging big endian little endian
 
@@ -1990,7 +1968,7 @@ Local:
 
 Computer network architecture:
 
-! [Computer Network Architecture] (https://raw.githubusercontent.com/mihir3445/interview/master/images/Computer Network Architecture.png)
+![Computer Network Architecture] (https://raw.githubusercontent.com/mihir3445/interview/master/images/Computer Network Architecture.png)
 
 ### The role and agreement of each layer
 
@@ -2069,12 +2047,12 @@ Class E | The first five digits are fixed at 11110, the latter are reserved for 
 
 IP datagram format:
 
-! [IP datagram format] (https://raw.githubusercontent.com/mihir3445/interview/master/images/IP datagram format.png)
+![IP datagram format] (https://raw.githubusercontent.com/mihir3445/interview/master/images/IP datagram format.png)
 #### ICMP Internet Control Message Protocol
 
 ICMP message format:
 
-! [ICMP message format] (https://raw.githubusercontent.com/mihir3445/interview/master/images/ICMP message format.png)
+![ICMP message format] (https://raw.githubusercontent.com/mihir3445/interview/master/images/ICMP message format.png)
 
 application:
 * PING (Packet InterNet Groper) detects the connectivity between two hosts
@@ -2144,11 +2122,11 @@ How TCP guarantees reliable transmission:
 
 TCP message structure
 
-! [TCP message] (https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP message.png)
+![TCP message] (https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP message.png)
 
 TCP header
 
-! [TCP header] (https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP header.png)
+![TCP header] (https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP header.png)
 
 TCP: Status Control Code (Code, Control Flag), which occupies 6 bits and has the following meanings:
 * URG: urgent bit (urgent). When `URG = 1, it indicates that the urgent pointer field is valid, which means the packet is an urgent packet. It tells the system that there is urgent data in this segment, which should be transmitted as soon as possible (equivalent to high-priority data), and the Urgent Pointer field in the above figure will also be enabled.
@@ -2172,11 +2150,11 @@ feature:
 
 UDP message structure
 
-! [UDP message] (https://raw.githubusercontent.com/mihir3445/interview/master/images/UDP message.png)
+![UDP message] (https://raw.githubusercontent.com/mihir3445/interview/master/images/UDP message.png)
 
 UDP header
 
-! [UDP Header] (https://raw.githubusercontent.com/mihir3445/interview/master/images/UDPHeader.png)
+![UDP Header] (https://raw.githubusercontent.com/mihir3445/interview/master/images/UDPHeader.png)
 
 > TCP / UDP pictures from: <https://github.com/JerryC8080/understand-tcp-udp>
 
@@ -2240,7 +2218,7 @@ TCP congestion control diagram
 
 ##### TCP three-way handshake to establish a connection
 
-! [UDP message] (https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP three-way handshake to establish a connection.png)
+![UDP message] (https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP three-way handshake to establish a connection.png)
 
 [Explain the whole process of TCP connection establishment]
 
@@ -2265,7 +2243,7 @@ TCP congestion control diagram
 
 ##### TCP four waves to release the connection
 
-! [UDP message] (https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP four waves to release the connection.png)
+![UDP message] (https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP four waves to release the connection.png)
 
 [Explain the whole process of TCP release connection]
 
@@ -2298,7 +2276,7 @@ TCP congestion control diagram
 
 TCP finite state machine picture
 
-! [TCP's finite state machine] (https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP's finite state machine.png)
+![TCP's finite state machine] (https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP's finite state machine.png)
 
 ### Application layer
 
@@ -2334,7 +2312,7 @@ domain name:
 standard format:
 
 * `Protocol type: [// server address [: port number]] [/ resource level UNIX file path] file name [? Query] [# Clip ID]
-    
+    
 Complete format:
 
 * `Protocol type: [// [Credential information required to access resources @] server address [: port number]] [/ resource level UNIX file path] file name [? Query] [# 段 ID]`
@@ -2361,30 +2339,30 @@ TRACE | Echo the request received by the server, mainly used for testing or diag
 Status code (Status-Code)
 
 * 1xx: indicates notification information, such as the request received or being processed
-    * 100 Continue: continue, the client should continue its request
-    * 101 Switching Protocols. The server switches the protocol according to the client's request. You can only switch to a more advanced protocol, for example, to a new version of HTTP
+    * 100 Continue: continue, the client should continue its request
+    * 101 Switching Protocols. The server switches the protocol according to the client's request. You can only switch to a more advanced protocol, for example, to a new version of HTTP
 * 2xx: indicates success, if received or known
-    * 200 OK: The request was successful
+    * 200 OK: The request was successful
 * 3xx: indicates redirection, further action must be taken to complete the request
-    * 301 Moved Permanently: Move permanently. The requested resource has been permanently moved to the new URL, the returned information will include the new URL, and the browser will automatically be directed to the new URL. Any new requests in the future should use the new URL instead
+    * 301 Moved Permanently: Move permanently. The requested resource has been permanently moved to the new URL, the returned information will include the new URL, and the browser will automatically be directed to the new URL. Any new requests in the future should use the new URL instead
 * 4xx: indicates the customer's error, such as wrong syntax in the request or failure to complete
-    * 400 Bad Request: The syntax of the client request is wrong, the server cannot understand
-    * 401 Unauthorized: request for user authentication
-    * 403 Forbidden: The server understands the request from the client, but refuses to execute the request (inadequate authority)
-    * 404 Not Found: The server cannot find the resource (web page) according to the client's request. With this code, the website designer can set a personalized page of "The resource you requested cannot be found"
-    * 408 Request Timeout: The server waits too long for the request sent by the client, timeout
+    * 400 Bad Request: The syntax of the client request is wrong, the server cannot understand
+    * 401 Unauthorized: request for user authentication
+    * 403 Forbidden: The server understands the request from the client, but refuses to execute the request (inadequate authority)
+    * 404 Not Found: The server cannot find the resource (web page) according to the client's request. With this code, the website designer can set a personalized page of "The resource you requested cannot be found"
+    * 408 Request Timeout: The server waits too long for the request sent by the client, timeout
 * 5xx: indicates an error of the server, such as the server fails to complete the request
-    * 500 Internal Server Error: Internal server error, unable to complete the request
-    * 503 Service Unavailable: Due to overload or system maintenance, the server is temporarily unable to process client requests. The length of the delay can be included in the Retry-After header of the server
-    * 504 Gateway Timeout: acting as a gateway or proxy server, not getting requests from remote servers in time
+    * 500 Internal Server Error: Internal server error, unable to complete the request
+    * 503 Service Unavailable: Due to overload or system maintenance, the server is temporarily unable to process client requests. The length of the delay can be included in the Retry-After header of the server
+    * 504 Gateway Timeout: acting as a gateway or proxy server, not getting requests from remote servers in time
 > 更多状态码：[菜鸟教程 . HTTP状态码](http://www.runoob.com/http/http-status-codes.html)
 
 ##### Other agreements
 
 * SMTP (Simple Main Transfer Protocol) is a standard for transmitting Email on the Internet and is a relatively simple text-based protocol. One or more recipients of a message are specified on it (in most cases it is confirmed to exist), and then the message text is transmitted. You can easily test an SMTP server through the Telnet program. SMTP uses TCP port 25.
 * DHCP (Dynamic Host Configuration Protocol) is a network protocol of a local area network. It uses UDP protocol to work and has two main purposes:
-    * For internal network or network service providers to automatically assign IP addresses to users
-    * Used by internal network administrators as a means of central management of all computers
+    * For internal network or network service providers to automatically assign IP addresses to users
+    * Used by internal network administrators as a means of central management of all computers
 * SNMP (Simple Network Management Protocol) constitutes a part of the Internet protocol family defined by the Internet Engineering Task Force (IETF). The protocol can support a network management system to monitor whether the devices connected to the network have any management concerns.
 
 ## � Network programming
@@ -2393,7 +2371,7 @@ Status code (Status-Code)
 
 > [Linux Socket programming (not limited to Linux)] (https://www.cnblogs.com/skynet/archive/2010/12/12/1903949.html)
 
-! [Socket client server communication] (https://raw.githubusercontent.com/mihir3445/interview/master/images/socket client server communication.jpg)
+![Socket client server communication] (https://raw.githubusercontent.com/mihir3445/interview/master/images/socket client server communication.jpg)
 
 
 #### Socket read () and write () functions
@@ -2429,7 +2407,7 @@ We know that TCP establishes a connection by performing a "three-way handshake",
 
 Only the three-way handshake is finished, but what about the three-way handshake in the socket function? Please see the picture below:
 
-! [TCP three-way handshake sent in socket] (http://images.cnblogs.com/cnblogs_com/skynet/201012/201012122157467258.png)
+![TCP three-way handshake sent in socket] (http://images.cnblogs.com/cnblogs_com/skynet/201012/201012122157467258.png)
 
 It can be seen from the figure:
 1. When the client calls connect, a connection request is triggered and a SYN J packet is sent to the server. At this time, connect enters a blocking state;
@@ -2441,7 +2419,7 @@ It can be seen from the figure:
 
 The above describes the three-way handshake establishment process of TCP in socket and the socket functions involved. Now we introduce the process of releasing the connection by the four-way handshake in the socket, please see the following figure:
 
-! [TCP four-way handshake sent in socket] (http://images.cnblogs.com/cnblogs_com/skynet/201012/201012122157487616.png)
+![TCP four-way handshake sent in socket] (http://images.cnblogs.com/cnblogs_com/skynet/201012/201012122157487616.png)
 
 The illustrated process is as follows:
 
@@ -2477,13 +2455,13 @@ So there is a FIN and ACK in each direction.
 * Hierarchical model
 * Network model (network model)
 * Relational model
-    * Relationship (relation): a relationship corresponds to a table usually said
-    * Tuple (tuple): a row in the table is a tuple
-    * Attribute (attribute): a column in the table is an attribute
-    * Key (key): a certain attribute group of a tuple can be uniquely determined in the table
-    * Domain (domain): a set of values ​​with the same data type
-    * Component: an attribute value in the tuple
-    * Relationship mode: the description of the relationship, generally expressed as `relationship name (attribute 1, attribute 2, ..., attribute n)`
+    * Relationship (relation): a relationship corresponds to a table usually said
+    * Tuple (tuple): a row in the table is a tuple
+    * Attribute (attribute): a column in the table is an attribute
+    * Key (key): a certain attribute group of a tuple can be uniquely determined in the table
+    * Domain (domain): a set of values ​​with the same data type
+    * Component: an attribute value in the tuple
+    * Relationship mode: the description of the relationship, generally expressed as `relationship name (attribute 1, attribute 2, ..., attribute n)`
 * Object oriented data model (object oriented data model)
 * Object relational data model
 * Semi-structured data model (semistructure data model)
@@ -2492,37 +2470,37 @@ So there is a FIN and ACK in each direction.
 
 <table>
   <tr>
-    <th> Object type </ th>
-    <th> Object </ th>
-    <th> Type of operation </ th>
-  </ tr>
+    <th> Object type </th>
+    <th> Object </th>
+    <th> Type of operation </th>
+  </tr>
   <tr>
-    <td rowspan = "4"> Database mode </ td>
-    <td> Mode </ td>
-    <td> <code> CREATE SCHEMA </ code> </ td>
-  </ tr>
+    <td rowspan = "4"> Database mode </td>
+    <td> Mode </td>
+    <td> <code> CREATE SCHEMA </code> </td>
+  </tr>
   <tr>
-    <td> Basic table </ td>
-    <td> <code> CREATE SCHEMA </ code>, <code> ALTER TABLE </ code> </ td>
-  </ tr>
-    <tr>
-    <td> View </ td>
-    <td> <code> CREATE VIEW </ code> </ td>
-  </ tr>
-    <tr>
-    <td> Index </ td>
-    <td> <code> CREATE INDEX </ code> </ td>
-  </ tr>
-    <tr>
-    <td rowspan = "2"> Data </ ​​td>
-    <td> Basic tables and views </ td>
-    <td> <code> SELECT </ code>, <code> INSERT </ code>, <code> UPDATE </ code>, <code> DELETE </ code>, <code> REFERENCES </ code>, <code > ALL PRIVILEGES </ code> </ td>
-  </ tr>
-    <tr>
-    <td> Attribute column </ td>
-    <td> <code> SELECT </ code>, <code> INSERT </ code>, <code> UPDATE </ code>, <code> REFERENCES </ code>, <code> ALL PRIVILEGES </ code> </ td>
-  </ tr>
-</ table>
+    <td> Basic table </td>
+    <td> <code> CREATE SCHEMA </code>, <code> ALTER TABLE </code> </td>
+  </tr>
+    <tr>
+    <td> View </td>
+    <td> <code> CREATE VIEW </code> </td>
+  </tr>
+    <tr>
+    <td> Index </td>
+    <td> <code> CREATE INDEX </code> </td>
+  </tr>
+    <tr>
+    <td rowspan = "2"> Data </​​td>
+    <td> Basic tables and views </td>
+    <td> <code> SELECT </code>, <code> INSERT </code>, <code> UPDATE </code>, <code> DELETE </code>, <code> REFERENCES </code>, <code > ALL PRIVILEGES </code> </td>
+  </tr>
+    <tr>
+    <td> Attribute column </td>
+    <td> <code> SELECT </code>, <code> INSERT </code>, <code> UPDATE </code>, <code> REFERENCES </code>, <code> ALL PRIVILEGES </code> </td>
+  </tr>
+</table>
 
 > SQL syntax tutorial: [runoob. SQL tutorial] (http://www.runoob.com/sql/sql-tutorial.html)
 
@@ -2539,8 +2517,8 @@ So there is a FIN and ACK in each direction.
 ### Database integrity
 
 * The integrity of the database refers to the correctness and compatibility of the data.
-    * Integrity: In order to prevent the existence of incompatible semantic (incorrect) data in the database.
-    * Security: In order to protect the database from malicious destruction and illegal access.
+    * Integrity: In order to prevent the existence of incompatible semantic (incorrect) data in the database.
+    * Security: In order to protect the database from malicious destruction and illegal access.
 * Trigger: It is a special event-driven process defined by the user in the relational table.
 
 ### Relational Data Theory
@@ -2570,11 +2548,11 @@ So there is a FIN and ACK in each direction.
 * Main technologies of concurrency control: blockade, timestamp, optimistic control method, multi-version concurrency control, etc.
 * Basic blocking types: exclusive lock (X lock / write lock), shared lock (S lock / read lock).
 * Livelock deadlock:
-    * Livelock: The transaction is always in a waiting state, which can be avoided by the strategy of first come, first served.
-    * Deadlock: Things can never end
-        * Prevention: one-time blockade method, sequential blockade method;
-        * Diagnosis: timeout method, waiting graph method;
-        * Cancellation: Undo the transaction with the lowest deadlock cost and release all the locks of this transaction, so that other transactions can continue to run.
+    * Livelock: The transaction is always in a waiting state, which can be avoided by the strategy of first come, first served.
+    * Deadlock: Things can never end
+        * Prevention: one-time blockade method, sequential blockade method;
+        * Diagnosis: timeout method, waiting graph method;
+        * Cancellation: Undo the transaction with the lowest deadlock cost and release all the locks of this transaction, so that other transactions can continue to run.
 * Serializable scheduling: The concurrent execution of multiple transactions is correct if and only if the result is the same as when these transactions are executed serially in a certain order. Criteria for correct scheduling of concurrent transactions in serializability.
 
 ## � Design pattern
@@ -2773,12 +2751,12 @@ void hello ();
 template <typename T>
 T sum (T t)
 {
-    return t;
+    return t;
 }
 template <typename T, typename ... Types>
 T sum (T first, Types ... rest)
 {
-    return first + sum <T> (rest ...);
+    return first + sum <T> (rest ...);
 }
 
 #endif
@@ -2791,7 +2769,7 @@ library.cpp
 #include "library.h"
 
 void hello () {
-    std :: cout << "Hello, World!" << std :: endl;
+    std :: cout << "Hello, World!" << std :: endl;
 }
 ```
 
@@ -2835,11 +2813,11 @@ using std :: endl;
 
 int main () {
 
-    hello ();
-    cout << "1 + 2 =" << sum (1,2) << endl;
-    cout << "1 + 2 + 3 =" << sum (1,2,3) << endl;
+    hello ();
+    cout << "1 + 2 =" << sum (1,2) << endl;
+    cout << "1 + 2 + 3 =" << sum (1,2,3) << endl;
 
-    return 0;
+    return 0;
 }
 ```
 
@@ -2860,15 +2838,15 @@ _tWinMain and _tmain function declaration
 
 ```cpp
 Int WINAPI _tWinMain (
-    HINSTANCE hInstanceExe,
-    HINSTANCE,
-    PTSTR pszCmdLine,
-    int nCmdShow);
+    HINSTANCE hInstanceExe,
+    HINSTANCE,
+    PTSTR pszCmdLine,
+    int nCmdShow);
 
 int _tmain (
-    int argc,
-    TCHAR * argv [],
-    TCHAR * envp []);
+    int argc,
+    TCHAR * argv [],
+    TCHAR * envp []);
 ```
 
 Application type | Entry point function | Startup function embedded in executable file
@@ -2918,26 +2896,26 @@ DllMain function
 ```cpp
 BOOL WINAPI DllMain (HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved)
 {
-    switch (fdwReason)
-    {
-    case DLL_PROCESS_ATTACH:
-        // Called when mapping a DLL to the process address space for the first time
-        // The DLL is being mapped into the process' address space.
-        break;
-    case DLL_THREAD_ATTACH:
-        // When the process creates a thread, it is used to tell the DLL to perform thread-related initialization (non-main thread execution)
-        // A thread is bing created.
-        break;
-    case DLL_THREAD_DETACH:
-        // The system calls ExitThread before the thread exits, the thread that is about to be terminated performs thread-related cleanup by telling the DLL
-        // A thread is exiting cleanly.
-        break;
-    case DLL_PROCESS_DETACH:
-        // Called when a DLL is removed from the process's address space
-        // The DLL is being unmapped from the process' address space.
-        break;
-    }
-    return (TRUE); // Used only for DLL_PROCESS_ATTACH
+    switch (fdwReason)
+    {
+    case DLL_PROCESS_ATTACH:
+        // Called when mapping a DLL to the process address space for the first time
+        // The DLL is being mapped into the process' address space.
+        break;
+    case DLL_THREAD_ATTACH:
+        // When the process creates a thread, it is used to tell the DLL to perform thread-related initialization (non-main thread execution)
+        // A thread is bing created.
+        break;
+    case DLL_THREAD_DETACH:
+        // The system calls ExitThread before the thread exits, the thread that is about to be terminated performs thread-related cleanup by telling the DLL
+        // A thread is exiting cleanly.
+        break;
+    case DLL_PROCESS_DETACH:
+        // Called when a DLL is removed from the process's address space
+        // The DLL is being unmapped from the process' address space.
+        break;
+    }
+    return (TRUE); // Used only for DLL_PROCESS_ATTACH
 }
 ```
 
@@ -3291,11 +3269,11 @@ contain:
 * [lintcode] (https://www.lintcode.com/)
 * [nowcoder] (https://www.nowcoder.net/)
 
-## � Interview question experience
+## � Interview question
 
 * [Niu Ke.. 2020 Autumn Recruitment Noodles Summary! (Post division)] (https://www.nowcoder.com/discuss/205497)
 * [Niuke.com] [Preparation for Autumn Tricks] Strategy for 2020 Autumn Tricks] (https://www.nowcoder.com/discuss/197116)
-* [Niuke.com 2019 School Recruitment Summary! [Daily Update]] (https://www.nowcoder.com/discuss/90907)
+* [Niuke.com 2019 School Recruitment Summary![Daily Update]] (https://www.nowcoder.com/discuss/90907)
 * [Niuke.com 2019 School Recruitment Technology Posts Summary [Technology]] (https://www.nowcoder.com/discuss/146655)
 * [Niu Ke.. Summary of 2018 School Recruitment Written Test Questions] (https://www.nowcoder.com/discuss/68802)
 * [Niu Ke.. The 2017 Autumn Campus Recruitment Pen Jing Face Special Topic Summary] (https://www.nowcoder.com/discuss/12805)
@@ -3312,10 +3290,6 @@ contain:
 * [cnblogs. Summary of common C ++ interview questions and basic knowledge points (1)] (https://www.cnblogs.com/LUO77/p/5771237.html)
 * [segmentfault. Summary of common interview questions in C ++] (https://segmentfault.com/a/1190000003745529)
 
-## � Recruiting time posts
-
-* [Niuke.com 2020 School Recruitment | 2020 IT Enterprise Recruitment Schedule] (https://www.nowcoder.com/school/schedule)
-
 ## � Recommend
 
 * [Github. CyC2018 / Job-Recommend] (https://github.com/CyC2018/Job-Recommend): � Internet internal push information (social recruitment, school recruitment, internship)
@@ -3327,14 +3301,16 @@ Including Issues and PRs for errata, sorted according to contribution time.
 
 [tamarous] (https://github.com/tamarous), [i0Ek3] (https://github.com/i0Ek3), [sniper00] (https://github.com/sniper00), [blackhorse001] (https : //github.com/blackhorse001), [houbaron] (https://github.com/houbaron), [Qouan] (https://github.com/Qouan), [2329408386] (https://github.com com / 2329408386), [FlyingfishMORE] (https://github.com/FlyingfishMORE), [Ematrix163] (https://github.com/Ematrix163), [ReturnZero23] (https://github.com/ReturnZero23), [kelvinkuo] (https://github.com/kelvinkuo), [henryace] (https://github.com/henryace), [xinghun] (https://github.com/xinghun), [maokelong] (https : //github.com/maokelong), [easyYao] (https://github.com/easyYao), [FengZiYjun] (https://github.com/FengZiYjun), [shangjiaxuan] (https://github.com com / shangjiaxuan), [kwongtailau] (https://github.com/kwongtailau), [asky991] (https://github.com/asky991), [traviszeng] (https://github.com/traviszeng), [kele1997] (https://github.com/kele1997), [hxdnshx] (https://github.com/hxdnshx), [a74731248] (https://github.com/a 74731248), [qvjp] (https://github.com/qvjp), [xindelvcheng] (https://github.com/xindelvcheng), [hbsun2113] (https://github.com/hbsun2113), [linkwk7 ] (https://github.com/linkwk7), [foolishflyfox] (https://github.com/foolishflyfox), [zhjp0] (https://github.com/zhjp0), [Mrtj2016] (https: / /github.com/Mrtj2016)
 
-## � Support sponsorship
-
-Reward me for a pack of spicy strips ~
-
-! [Huihut-AliPay] (https://huihut-img.oss-cn-shenzhen.aliyuncs.com/Huihut-AliPay-H370.png)! [Huihut-WeChatPay] (https: //huihut-img.oss- cn-shenzhen.aliyuncs.com/Huihut-WeChatPay-H370.png)
-
 ## � License
 
 This warehouse follows the CC BY-NC-SA 4.0 (signed-non-commercial use-sharing in the same way) agreement, please indicate the source for reprinting, and may not be used for commercial purposes.
 
-[! [CC BY-NC-SA 4.0] (https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)] (LICENSE)
+[![CC BY-NC-SA 4.0] (https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)] (LICENSE)
+
+� This is a summary of basic knowledge for job seekers and beginners in C / C ++ technology direction, including language, library, data structure, algorithm, system, network, link loading library and other knowledge and interview experience, recruitment, internal promotion And other information.
+
+� Side directory support methods: [� Docsify documentation] (https://interview.huihut.com), [Github + TOC navigation] (https://github.com/jawil/GayHub) ([TOC preview.png] (https://raw.githubusercontent.com/mihir3445/interview/master/images/TOC preview.png))
+
+� Save as PDF: Use the Chrome browser to open the <a href="https://interview.huihut.com"> � Docsify document </a> page, shrink the left directory-right click-print-select the target printer is Save as PDF-Save ([Print Preview.png] (https://raw.githubusercontent.com/mihir3445/interview/master/images/Print Preview.png))
+
+� If there are any errors or improvements in the contents of the warehouse, issues are welcome. Suggestions or discussions can be submitted at [# 12] (https://github.com/mihir3445/interview/issues/12). Due to my limited level, the knowledge points in the warehouse are from my original, reading notes, books, blog posts, etc. Non-original has been marked with the source, if there is any omission, please issue an issue. This warehouse follows the [CC BY-NC-SA 4.0 (signed-non-commercial use-shared in the same way)] (LICENSE) agreement, please indicate the source for the reprint, and may not be used for commercial purposes.
