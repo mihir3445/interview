@@ -1,46 +1,48 @@
 <div align="center">
-📖 Github
+� Github
 &emsp;&emsp; | &emsp;&emsp;
-<a href="https://interview.huihut.com">📚 Docsify</a>
+<a href="https://interview.huihut.com">� Docsify</a>
 </div> 
 <br>
 
-<b><details><summary>💡 关于</summary></b>
+<b><details><summary>� 关于</summary></b>
+  
+NOTE :- This is english traslation version of the huihut/interview. All the credit goes to the original authors.
 
-📚 This warehouse is a summary of basic knowledge for job seekers and beginners in C / C ++ technology direction, including language, library, data structure, algorithm, system, network, link loading library and other knowledge and interview experience, recruitment, internal promotion And other information.
+� This is a summary of basic knowledge for job seekers and beginners in C / C ++ technology direction, including language, library, data structure, algorithm, system, network, link loading library and other knowledge and interview experience, recruitment, internal promotion And other information.
 
-💡 Side directory support methods: [📚 Docsify documentation] (https://interview.huihut.com), [Github + TOC navigation] (https://github.com/jawil/GayHub) ([TOC preview.png] (https://raw.githubusercontent.com/huihut/interview/master/images/TOC preview.png))
+� Side directory support methods: [� Docsify documentation] (https://interview.huihut.com), [Github + TOC navigation] (https://github.com/jawil/GayHub) ([TOC preview.png] (https://raw.githubusercontent.com/huihut/interview/master/images/TOC preview.png))
 
-📄 Save as PDF: Use the Chrome browser to open the <a href="https://interview.huihut.com"> 📚 Docsify document </a> page, shrink the left directory-right click-print-select the target printer is Save as PDF-Save ([Print Preview.png] (https://raw.githubusercontent.com/huihut/interview/master/images/Print Preview.png))
+� Save as PDF: Use the Chrome browser to open the <a href="https://interview.huihut.com"> � Docsify document </a> page, shrink the left directory-right click-print-select the target printer is Save as PDF-Save ([Print Preview.png] (https://raw.githubusercontent.com/huihut/interview/master/images/Print Preview.png))
 
-🙏 If there are any errors or improvements in the contents of the warehouse, issues or pr are welcome. Suggestions or discussions can be submitted at [# 12] (https://github.com/huihut/interview/issues/12). Due to my limited level, the knowledge points in the warehouse are from my original, reading notes, books, blog posts, etc. Non-original has been marked with the source, if there is any omission, please issue an issue. This warehouse follows the [CC BY-NC-SA 4.0 (signed-non-commercial use-shared in the same way)] (LICENSE) agreement, please indicate the source for the reprint, and may not be used for commercial purposes.
+� If there are any errors or improvements in the contents of the warehouse, issues are welcome. Suggestions or discussions can be submitted at [# 12] (https://github.com/huihut/interview/issues/12). Due to my limited level, the knowledge points in the warehouse are from my original, reading notes, books, blog posts, etc. Non-original has been marked with the source, if there is any omission, please issue an issue. This warehouse follows the [CC BY-NC-SA 4.0 (signed-non-commercial use-shared in the same way)] (LICENSE) agreement, please indicate the source for the reprint, and may not be used for commercial purposes.
 
 </ details>
 
 
-## 📑 Directory
+## � Directory
 
 * [➕ C / C ++] (#-cc)
 * [⭐️ Effective] (# ️-effective)
-* [📦 STL] (#-stl)
+* [� STL] (#-stl)
 * [〽️ Data Structure] (# ️-Data Structure)
 * [⚡️ Algorithm] (# ️-Algorithm)
 * [❓ Problems] (#-problems)
-* [💻 Operating System] (# -operating system)
+* [� Operating System] (# -operating system)
 * [☁️ Computer Network] (# ️-Computer Network)
-* [🌩 Network Programming] (# -Network Programming)
-* [💾 Database] (#-Database)
-* [📏 Design Mode] (# -Design Mode)
+* [� Network Programming] (# -Network Programming)
+* [� Database] (#-Database)
+* [� Design Mode] (# -Design Mode)
 * [⚙️ Link loading library] (# ️-Link loading library)
-* [📚 Books] (#-书)
-* [🔱 C / C ++ development direction] (# -cc-development direction)
-* [💯 Review brush questions website] (# -review brush questions website)
-* [📝 Interview Question Experience] (# -Interview Question Experience)
-* [📆 Recruitment Time Post] (# -Recruitment Time Post)
-* [👍 内 推] (#-内 推)
-* [👬 Contributor] (# -Contributor)
-* [🍭 Support Sponsor] (# -Support Sponsor)
-* [📜 License] (#-license)
+* [� Books] (#-书)
+* [� C / C ++ development direction] (# -cc-development direction)
+* [� Review brush questions website] (# -review brush questions website)
+* [� Interview Question Experience] (# -Interview Question Experience)
+* [� Recruitment Time Post] (# -Recruitment Time Post)
+* [� 内 推] (#-内 推)
+* [� Contributor] (# -Contributor)
+* [� Support Sponsor] (# -Support Sponsor)
+* [� License] (#-license)
 
 ## ➕ C / C ++
 
@@ -311,7 +313,7 @@ The role of `extern" C "` is to allow the C ++ compiler to treat the code declar
 
 extern "C" use
 
-`` `cpp
+```cpp
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -321,29 +323,29 @@ void * memset (void *, int, size_t);
 #ifdef __cplusplus
 }
 #endif
-`` `
+```
 
 ### struct and typedef struct
 
 #### C
 
-`` `c
+```c
 // c
 typedef struct Student {
     int age;
 } S;
-`` `
+```
 
 Equivalent to
 
-`` `c
+```c
 // c
 struct Student {
     int age;
 };
 
 typedef struct Student S;
-`` `
+```
 
 In this case, `S` is equivalent to` struct Student`, but the two identifier namespaces are different.
 
@@ -409,7 +411,7 @@ Union is a special class that saves space. A union can have multiple data member
 
 union use
 
-`` `cpp
+```cpp
 #include <iostream>
 
 union UnionTest {
@@ -441,7 +443,7 @@ int main () {
 
     return 0;
 }
-`` `
+```
 
 ### C implements C ++ classes
 
@@ -479,27 +481,27 @@ void doB (B b) {}
 
 int main ()
 {
-A a1 (1); // OK: direct initialization
-A a2 = 1; // OK: copy initialization
-A a3 {1}; // OK: direct list initialization
-A a4 = {1}; // OK: initialization of the copy list
-A a5 = (A) 1; // OK: Allow explicit conversion of static_cast
-doA (1); // OK: Allow implicit conversion from int to A
-if (a1); // OK: implicit conversion from A to bool using conversion function A :: operator bool ()
-bool a6 (a1); // OK: implicit conversion from A to bool using conversion function A :: operator bool ()
-bool a7 = a1; // OK: implicit conversion from A to bool using conversion function A :: operator bool ()
-bool a8 = static_cast <bool> (a1); // OK: direct initialization of static_cast
+	A a1 (1); // OK: direct initialization
+	A a2 = 1; // OK: copy initialization
+	A a3 {1}; // OK: direct list initialization
+	A a4 = {1}; // OK: initialization of the copy list
+	A a5 = (A) 1; // OK: Allow explicit conversion of static_cast
+	doA (1); // OK: Allow implicit conversion from int to A
+	if (a1); // OK: implicit conversion from A to bool using conversion function A :: operator bool ()
+	bool a6 (a1); // OK: implicit conversion from A to bool using conversion function A :: operator bool ()
+	bool a7 = a1; // OK: implicit conversion from A to bool using conversion function A :: operator bool ()
+	bool a8 = static_cast <bool> (a1); // OK: direct initialization of static_cast
 
-B b1 (1); // OK: direct initialization
-B b2 = 1; // Error: Objects whose constructor is explicitly modified cannot be copied and initialized
-B b3 {1}; // OK: direct list initialization
-B b4 = {1}; // Error: Objects whose constructors are explicitly decorated cannot be copied list initialization
-B b5 = (B) 1; // OK: Allow explicit conversion of static_cast
-doB (1); // Error: The object whose constructor is explicitly modified cannot be implicitly converted from int to B
-if (b1); // OK: the object modified by the explicit conversion function B :: operator bool () can be converted from B to bool in context
-bool b6 (b1); // OK: the conversion function B :: operator bool () is explicitly modified to be contextually convertible from B to bool
-bool b7 = b1; // Error: the object modified by the explicit conversion function B :: operator bool () cannot be implicitly converted
-bool b8 = static_cast <bool> (b1); // OK: static_cast for direct initialization
+	B b1 (1); // OK: direct initialization
+	B b2 = 1; // Error: Objects whose constructor is explicitly modified cannot be copied and initialized
+	B b3 {1}; // OK: direct list initialization
+	B b4 = {1}; // Error: Objects whose constructors are explicitly decorated cannot be copied list initialization
+	B b5 = (B) 1; // OK: Allow explicit conversion of static_cast
+	doB (1); // Error: The object whose constructor is explicitly modified cannot be implicitly converted from int to B
+	if (b1); // OK: the object modified by the explicit conversion function B :: operator bool () can be converted from B to bool in context
+	bool b6 (b1); // OK: the conversion function B :: operator bool () is explicitly modified to be contextually convertible from B to bool
+	bool b7 = b1; // Error: the object modified by the explicit conversion function B :: operator bool () cannot be implicitly converted
+	bool b8 = static_cast <bool> (b1); // OK: static_cast for direct initialization
 
 return 0;
 }
@@ -519,35 +521,35 @@ return 0;
 
 A `using statement` statement introduces only one member of the namespace at a time. It allows us to know exactly which name is referenced in the program. Such as:
 
-`` `cpp
+```cpp
 using namespace_name :: name;
-`` `
+```
 
 #### Using statement of constructor
 
 In C ++ 11, derived classes can reuse the constructors defined by their direct base classes.
 
-`` `cpp
+```cpp
 class Derived: Base {
 public:
     using Base :: Base;
     / * ... * /
 };
-`` `
+```
 
 As described in the using statement above, for each constructor of the base class, the compiler generates a derived class constructor corresponding to it (the parameter list is exactly the same). Generate the following type constructor:
 
-`` `cpp
+```cpp
 Derived (parms): Base (args) {}
-`` `
+```
 
 #### using instructions
 
 The `using directive` makes all names in a particular namespace visible, so we do n’t need to add any prefix qualifiers to them. Such as:
 
-`` `cpp
+```cpp
 using namespace_name name;
-`` `
+```
 
 #### Minimize the use of `using instructions` to pollute namespaces
 
@@ -557,28 +559,28 @@ using
 
 Use as few instructions as possible
 
-`` `cpp
+```cpp
 using namespace std;
-`` `
+```
 
 Should use more `using statement`
 
-`` `cpp
+```cpp
 int x;
 std :: cin >> x;
 std :: cout << x << std :: endl;
-`` `
+```
 
 or
 
-`` `cpp
+```cpp
 using std :: cin;
 using std :: cout;
 using std :: endl;
 int x;
 cin >> x;
 cout << x << endl;
-`` `
+```
 
 ### :: Range resolution operator
 
@@ -590,7 +592,7 @@ cout << x << endl;
 
 :: Use
 
-`` `cpp
+```cpp
 int count = 11; // global (: :) count
 
 class A {
@@ -614,34 +616,34 @@ fun (); // Test 3
 
 return 0;
 }
-`` `
+```
 
 ### enum enumeration type
 
 #### Scoped enumerated types
 
-`` `cpp
+```cpp
 enum class open_modes {input, output, append};
-`` `
+```
 
 #### Unlimited scope enumerated type
 
-`` `cpp
+```cpp
 enum color {red, yellow, green};
 enum {floatPrec = 6, doublePrec = 10};
-`` `
+```
 
 ### decltype
 
 The decltype keyword is used to check the declared type or expression type and value classification of an entity. grammar:
 
-`` `cpp
+```cpp
 decltype (expression)
-`` `
+```
 
 decltype use
 
-`` `cpp
+```cpp
 // Tail return allows us to declare the return type after the parameter list
 template <typename It>
 auto fcn (It beg, It end)-> decltype (* beg)
@@ -656,7 +658,7 @@ auto fcn2 (It beg, It end)-> typename remove_reference <decltype (* beg)> :: typ
     // Processing sequence
     return * beg; // returns a copy of an element in the sequence
 }
-`` `
+```
 
 ### Quote
 
@@ -698,7 +700,7 @@ Initialize an object with a curly brace initializer list, where the correspondin
 
 initializer_list use
 
-`` `cpp
+```cpp
 #include <iostream>
 #include <vector>
 #include <initializer_list>
@@ -747,7 +749,7 @@ int main ()
     templated_fn <std :: initializer_list <int >> ({1, 2, 3}); // OK
     templated_fn <std :: vector <int >> ({1, 2, 3}); // also OK
 }
-`` `
+```
 
 ### Object Oriented
 
@@ -785,14 +787,14 @@ Encapsulate objective things into abstract classes, and the class can operate it
 
 Function overloading
 
-`` `cpp
+```cpp
 class A
 {
 public:
     void do (int a);
     void do (int a, int b);
 };
-`` `
+```
 
 #### Dynamic polymorphism (runtime / late binding)
 
@@ -807,7 +809,7 @@ public:
 
 Dynamic polymorphism usage
 
-`` `cpp
+```cpp
 class Shape // shape class
 {
 public:
@@ -841,7 +843,7 @@ int main ()
     shape2 = nullptr;
     return 0;
 }
-`` `
+```
 
 ### Virtual destructor
 
@@ -849,7 +851,7 @@ The virtual destructor is to resolve the pointer of the base class to the derive
 
 Use of virtual destructor
 
-`` `cpp
+```cpp
 class Shape
 {
 public:
@@ -871,15 +873,15 @@ int main ()
     shape1 = NULL;
     return 0;
 }
-`` `
+```
 
 ### Pure virtual function
 
 A pure virtual function is a special virtual function. In the base class, you cannot give a meaningful implementation of the virtual function, but declare it as a pure virtual function, and its implementation is left to the derived class of the base class.
 
-`` `cpp
+```cpp
 virtual int A () = 0;
-`` `
+```
 
 ### Virtual function, pure virtual function
 
@@ -949,17 +951,17 @@ malloc, free use
 
 Apply for memory and confirm whether the application is successful
 
-`` `cpp
+```cpp
 char * str = (char *) malloc (100);
 assert (str! = nullptr);
-`` `
+```
 
 Pointer becomes empty after freeing memory
 
-`` `cpp
+```cpp
 free (p);
 p = nullptr;
-`` `
+```
 
 #### new, delete
 
@@ -971,25 +973,25 @@ new, delete use
 
 Apply for memory and confirm whether the application is successful
 
-`` `cpp
+```cpp
 int main ()
 {
     T * t = new T (); // Memory allocation first, then constructor
     delete t; // Destructor first, then release memory
     return 0;
 }
-`` `
+```
 
 #### Position new
 
 Positioning new (placement new) allows us to pass additional address parameters to new to create objects in a pre-specified memory area.
 
-`` `cpp
+```cpp
 new (place_address) type
 new (place_address) type (initializers)
 new (place_address) type [size]
 new (place_address) type [size] {braced initializer list}
-`` `
+```
 
 * `place_address` is a pointer
 * `initializers` provides a (possibly empty) comma-separated list of initial values
@@ -1029,9 +1031,9 @@ Header file: `#include <memory>`
 
 #### C ++ 98
 
-`` `cpp
+```cpp
 std :: auto_ptr <std :: string> ps (new std :: string (str));
-`` `
+```
 
 #### C ++ 11
 
@@ -1110,14 +1112,14 @@ Deprecated by c ++ 11 due to lack of language features such as "std :: move" sem
 
 bad_cast use
 
-`` `cpp
+```cpp
 try {
     Circle & ref_circle = dynamic_cast <Circle &> (ref_shape);
 }
 catch (bad_cast b) {
     cout << "Caught:" << b.what ();
 }
-`` `
+```
 
 ### Runtime Type Information (RTTI)
 
@@ -1139,7 +1141,7 @@ catch (bad_cast b) {
 
 typeid, type_info use
 
-`` `cpp
+```cpp
 #include <iostream>
 using namespace std;
 
@@ -1199,7 +1201,7 @@ delete b;
 b = nullptr;
 return 0;
 }
-`` `
+```
 
 ## ⭐️ Effective
 
@@ -1292,7 +1294,7 @@ return 0;
 * [FAQ of Bjarne Stroustrup] (http://www.stroustrup.com/bs_faq.html)
 * [Bjarne Stroustrup's C ++ style and tips FAQ] (http://www.stroustrup.com/bs_faq2.html)
 
-## 📦 STL
+## � STL
 
 ### STL index
 
@@ -1336,35 +1338,35 @@ Algorithm | Underlying Algorithm | Time Complexity | Non-Repeatable
 
 Sequential stack data structure and pictures
 
-`` `cpp
+```cpp
 typedef struct {
 ElemType * elem;
 int top;
 int size;
 int increment;
 } SqStack;
-`` `
+```
 
-! [] (https://raw.githubusercontent.com/huihut/interview/master/images/SqStack.png)
+![](https://raw.githubusercontent.com/huihut/interview/master/images/SqStack.png)
 
 #### Queue (Sequence Queue)
 
 Queue data structure
 
-`` `cpp
+```cpp
 typedef struct {
 ElemType * elem;
 int front;
 int rear;
 int maxSize;
 } SqQueue;
-`` `
+```
 
 ##### Acyclic queue
 
 Acyclic queue picture
 
-! [] (https://raw.githubusercontent.com/huihut/interview/master/images/SqQueue.png)
+![](https://raw.githubusercontent.com/huihut/interview/master/images/SqQueue.png)
 
 `SqQueue.rear ++`
 
@@ -1372,7 +1374,7 @@ Acyclic queue picture
 
 Circular queue picture
 
-! [] (https://raw.githubusercontent.com/huihut/interview/master/images/SqLoopStack.png)
+![](https://raw.githubusercontent.com/huihut/interview/master/images/SqLoopStack.png)
 
 `SqQueue.rear = (SqQueue.rear + 1)% SqQueue.maxSize`
 
@@ -1382,16 +1384,16 @@ Circular queue picture
 
 Sequence table data structure and pictures
 
-`` `cpp
+```cpp
 typedef struct {
 ElemType * elem;
 int length;
 int size;
 int increment;
 } SqList;
-`` `
+```
 
-! [] (https://raw.githubusercontent.com/huihut/interview/master/images/SqList.png)
+![](https://raw.githubusercontent.com/huihut/interview/master/images/SqList.png)
 
 
 ### Chain structure
@@ -1402,18 +1404,18 @@ int increment;
 
 Chained data structure
 
-`` `cpp
+```cpp
 typedef struct LNode {
     ElemType data;
     struct LNode * next;
 } LNode, * LinkList;
-`` `
+```
 
 #### Link Queue
 
 Chain queue picture
 
-! [] (https://raw.githubusercontent.com/huihut/interview/master/images/LinkQueue.png)
+![](https://raw.githubusercontent.com/huihut/interview/master/images/LinkQueue.png)
 
 #### Chain representation of linear table
 
@@ -1421,19 +1423,19 @@ Chain queue picture
 
 Singly linked list pictures
 
-! [] (https://raw.githubusercontent.com/huihut/interview/master/images/LinkList.png)
+![](https://raw.githubusercontent.com/huihut/interview/master/images/LinkList.png)
 
 ##### Doubly linked list (Du-Link-List)
 
 Picture of doubly linked list
 
-! [] (https://raw.githubusercontent.com/huihut/interview/master/images/DuLinkList.png)
+![](https://raw.githubusercontent.com/mihir3445/interview/master/images/DuLinkList.png)
 
 ##### Cir-Link-List
 
 Picture of a circular list
 
-! [] (https://raw.githubusercontent.com/huihut/interview/master/images/CirLinkList.png)
+![](https://raw.githubusercontent.com/mihir3445/interview/master/images/CirLinkList.png)
 
 ### Hash table
 
@@ -1463,7 +1465,7 @@ Hash function: `H (key): K-> D, key ∈ K`
 
 Hash table data structure and picture of linear detection
 
-`` `cpp
+```cpp
 typedef char KeyType;
 
 typedef struct {
@@ -1476,9 +1478,9 @@ int size;
 int count;
 bool * tag;
 } HashTable;
-`` `
+```
 
-! [] (https://raw.githubusercontent.com/huihut/interview/master/images/HashTable.png)
+![](https://raw.githubusercontent.com/mihir3445/interview/master/images/HashTable.png)
 
 ### Recursion
 
@@ -1507,7 +1509,7 @@ The function calls itself directly or indirectly
 
 Storage representation and picture of head and tail linked list of generalized table
 
-`` `cpp
+```cpp
 // Head and tail linked list storage representation of generalized table
 typedef enum {ATOM, LIST} ElemTag;
 // ATOM == 0: atom, LIST == 1: child table
@@ -1524,15 +1526,15 @@ typedef struct GLNode {
         // ptr is the pointer field of the table node, prt.hp and ptr.tp point to the head and tail of the table respectively
     } a;
 } * GList, GLNode;
-`` `
+```
 
-! [] (https://raw.githubusercontent.com/huihut/interview/master/images/GeneralizedList1.png)
+![](https://raw.githubusercontent.com/mihir3445/interview/master/images/GeneralizedList1.png)
 
 ##### Extended linear linked list storage representation
 
 Extended linear linked list storage representation and pictures
 
-`` `cpp
+```cpp
 // Extended linear linked list storage representation of generalized tables
 typedef enum {ATOM, LIST} ElemTag;
 // ATOM == 0: atom, LIST == 1: child table
@@ -1547,9 +1549,9 @@ typedef struct GLNode1 {
     struct GLNode1 * tp;
     // Equivalent to next in a linear list, pointing to the next element node
 } * GList1, GLNode1;
-`` `
+```
 
-! [] (https://raw.githubusercontent.com/huihut/interview/master/images/GeneralizedList2.png)
+![](https://raw.githubusercontent.com/mihir3445/interview/master/images/GeneralizedList2.png)
 
 ### Binary tree
 
@@ -1570,25 +1572,25 @@ typedef struct GLNode1 {
 
 Binary tree data structure
 
-`` `cpp
+```cpp
 typedef struct BiTNode
 {
     TElemType data;
     struct BiTNode * lchild, * rchild;
 } BiTNode, * BiTree;
-`` `
+```
 
 ##### Sequential storage
 
 Binary tree sequential storage of pictures
 
-! [] (https://raw.githubusercontent.com/huihut/interview/master/images/SqBinaryTree.png)
+![](https://raw.githubusercontent.com/mihir3445/interview/master/images/SqBinaryTree.png)
 
 ##### Chain storage
 
 Binary tree chain storage pictures
 
-! [] (https://raw.githubusercontent.com/huihut/interview/master/images/LinkBinaryTree.png)
+![](https://raw.githubusercontent.com/mihir3445/interview/master/images/LinkBinaryTree.png)
 
 #### Traversal method
 
@@ -1633,7 +1635,7 @@ A set of disjoint subsets S = {S1, S2, ..., Sn}
 
 Balanced binary tree picture
 
-! [] (https://raw.githubusercontent.com/huihut/interview/master/images/Self-balancingBinarySearchTree.png)
+![](https://raw.githubusercontent.com/mihir3445/interview/master/images/Self-balancingBinarySearchTree.png)
 
 ##### Minimum imbalance tree
 
@@ -1708,7 +1710,7 @@ The data of the internal nodes can be obtained directly, without having to locat
 
 Octree pictures
 
-! [] (https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Octree2.png/400px-Octree2.png)
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Octree2.png/400px-Octree2.png)
 
 An octree, or octree, is a tree-like data structure used to describe three-dimensional space (divide space). Each node of the octree represents a volume element of a cube, and each node has eight child nodes. The volume elements represented by these eight child nodes add up to the volume of the parent node. Generally, the center point serves as the bifurcation center of the node.
 
@@ -1765,8 +1767,8 @@ Graph search algorithm | data structure | traversal time complexity | space comp
 
 Algorithm | Idea | Application
 --- | --- | ---
-[Divide and Conquer] (https://zh.wikipedia.org/wiki/%E5%88%86%E6%B2%BB%E6%B3%95) | divide a complex problem into two or more The same or similar sub-problems, until the last sub-problem can be simply solved directly, the solution of the original problem is the combination of the sub-problems | [round robin schedule problem] (https://github.com/huihut/interview/tree/ master / Problems / RoundRobinProblem), sorting algorithm (quick sorting, merge sorting)
-[Dynamic Planning] (https://zh.wikipedia.org/wiki/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92)|By decomposing the original problem into relative A simple subproblem method for solving complex problems, suitable for problems with overlapping subproblems and optimal substructure properties | [Backpack problem] (https://github.com/huihut/interview/tree/master/Problems/ KnapsackProblem), Fibonacci sequence
+[Divide and Conquer] (https://zh.wikipedia.org/wiki/%E5%88%86%E6%B2%BB%E6%B3%95) | divide a complex problem into two or more The same or similar sub-problems, until the last sub-problem can be simply solved directly, the solution of the original problem is the combination of the sub-problems | [round robin schedule problem] (https://github.com/mihir3445/interview/tree/ master / Problems / RoundRobinProblem), sorting algorithm (quick sorting, merge sorting)
+[Dynamic Planning] (https://zh.wikipedia.org/wiki/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92)|By decomposing the original problem into relative A simple subproblem method for solving complex problems, suitable for problems with overlapping subproblems and optimal substructure properties | [Backpack problem] (https://github.com/mihir3445/interview/tree/master/Problems/ KnapsackProblem), Fibonacci sequence
 [Greedy method] (https://zh.wikipedia.org/wiki/%E8%B4%AA%E5%BF%83%E6%B3%95)|A choice in each step is taken in the current state The best or optimal (that is, the most favorable) choice, which hopes to result in the best or optimal algorithm | travel salesman problem (shortest path problem), minimum spanning tree, Huffman coding
 
 ## ❓ Problems
@@ -1798,7 +1800,7 @@ Algorithm | Idea | Application
 
 * [Nuke. Online Programming Topics] (https://www.nowcoder.com/activity/oj)
 
-## 💻 Operating system
+## � Operating system
 
 ### Processes and threads
 
@@ -1923,8 +1925,8 @@ Little endian | 78 | 56 | 34 | 12
 
 Big endian little endian pictures
 
-! [大端 序] (https://raw.githubusercontent.com/huihut/interview/master/images/CPU-Big-Endian.svg.png)
-! [Little Endian Order] (https://raw.githubusercontent.com/huihut/interview/master/images/CPU-Little-Endian.svg.png)
+! [大端 序] (https://raw.githubusercontent.com/mihir3445/interview/master/images/CPU-Big-Endian.svg.png)
+! [Little Endian Order] (https://raw.githubusercontent.com/mihir3445/interview/master/images/CPU-Little-Endian.svg.png)
 
 ##### Judging big endian little endian
 
@@ -1932,7 +1934,7 @@ Judge big endian little endian
 
 You can judge whether your CPU byte order is big-endian or little-endian like this:
 
-`` `cpp
+```cpp
 #include <iostream>
 using namespace std;
 
@@ -1947,7 +1949,7 @@ cout << "little end" << endl;
 
 return 0;
 }
-`` `
+```
 
 ##### Byte order of processors of various architectures
 
@@ -1988,7 +1990,7 @@ Local:
 
 Computer network architecture:
 
-! [Computer Network Architecture] (https://raw.githubusercontent.com/huihut/interview/master/images/Computer Network Architecture.png)
+! [Computer Network Architecture] (https://raw.githubusercontent.com/mihir3445/interview/master/images/Computer Network Architecture.png)
 
 ### The role and agreement of each layer
 
@@ -2067,12 +2069,12 @@ Class E | The first five digits are fixed at 11110, the latter are reserved for 
 
 IP datagram format:
 
-! [IP datagram format] (https://raw.githubusercontent.com/huihut/interview/master/images/IP datagram format.png)
+! [IP datagram format] (https://raw.githubusercontent.com/mihir3445/interview/master/images/IP datagram format.png)
 #### ICMP Internet Control Message Protocol
 
 ICMP message format:
 
-! [ICMP message format] (https://raw.githubusercontent.com/huihut/interview/master/images/ICMP message format.png)
+! [ICMP message format] (https://raw.githubusercontent.com/mihir3445/interview/master/images/ICMP message format.png)
 
 application:
 * PING (Packet InterNet Groper) detects the connectivity between two hosts
@@ -2142,11 +2144,11 @@ How TCP guarantees reliable transmission:
 
 TCP message structure
 
-! [TCP message] (https://raw.githubusercontent.com/huihut/interview/master/images/TCP message.png)
+! [TCP message] (https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP message.png)
 
 TCP header
 
-! [TCP header] (https://raw.githubusercontent.com/huihut/interview/master/images/TCP header.png)
+! [TCP header] (https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP header.png)
 
 TCP: Status Control Code (Code, Control Flag), which occupies 6 bits and has the following meanings:
 * URG: urgent bit (urgent). When `URG = 1, it indicates that the urgent pointer field is valid, which means the packet is an urgent packet. It tells the system that there is urgent data in this segment, which should be transmitted as soon as possible (equivalent to high-priority data), and the Urgent Pointer field in the above figure will also be enabled.
@@ -2170,11 +2172,11 @@ feature:
 
 UDP message structure
 
-! [UDP message] (https://raw.githubusercontent.com/huihut/interview/master/images/UDP message.png)
+! [UDP message] (https://raw.githubusercontent.com/mihir3445/interview/master/images/UDP message.png)
 
 UDP header
 
-! [UDP Header] (https://raw.githubusercontent.com/huihut/interview/master/images/UDPHeader.png)
+! [UDP Header] (https://raw.githubusercontent.com/mihir3445/interview/master/images/UDPHeader.png)
 
 > TCP / UDP pictures from: <https://github.com/JerryC8080/understand-tcp-udp>
 
@@ -2211,7 +2213,7 @@ Flow control is to make the sending rate of the sender not too fast, but to allo
 
 Variable window for flow control
 
-! [] (https://raw.githubusercontent.com/huihut/interview/master/images/Example of using variable windows for flow control.png)
+![](https://raw.githubusercontent.com/mihir3445/interview/master/images/Example of using variable windows for flow control.png)
 
 #### TCP congestion control
 
@@ -2228,17 +2230,17 @@ Congestion control is to prevent excessive data from being injected into the net
 
 TCP congestion control diagram
 
-! [] (https://raw.githubusercontent.com/huihut/interview/master/images/TCP congestion window cwnd changes during congestion control.png)
-! [] (https://raw.githubusercontent.com/huihut/interview/master/images/fast retransmission schematic.png)
-! [] (https://raw.githubusercontent.com/huihut/interview/master/images/TCP congestion control flowchart.png)
+![](https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP congestion window cwnd changes during congestion control.png)
+![](https://raw.githubusercontent.com/mihir3445/interview/master/images/fast retransmission schematic.png)
+![](https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP congestion control flowchart.png)
 
 #### TCP transmission connection management
 
-> Because it is important for TCP to establish a connection with three handshake and to release the connection with four waves, attach a detailed description of this chapter in the book "Computer Network (7th Edition)-Xie Xiren": huihut / interview / master / images / TCP-transport-connection-management.png>
+> Because it is important for TCP to establish a connection with three handshake and to release the connection with four waves, attach a detailed description of this chapter in the book "Computer Network (7th Edition)-Xie Xiren": mihir3445 / interview / master / images / TCP-transport-connection-management.png>
 
 ##### TCP three-way handshake to establish a connection
 
-! [UDP message] (https://raw.githubusercontent.com/huihut/interview/master/images/TCP three-way handshake to establish a connection.png)
+! [UDP message] (https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP three-way handshake to establish a connection.png)
 
 [Explain the whole process of TCP connection establishment]
 
@@ -2259,11 +2261,11 @@ TCP congestion control diagram
 
 [Answer three] In order to prevent the invalid connection request segment from being sent to the server suddenly, an error is generated.
 
-> ["Computer Network (7th Edition) -Xie Xiren"] (https://raw.githubusercontent.com/huihut/interview/master/images/TCP-transport-connection-management.png)
+> ["Computer Network (7th Edition) -Xie Xiren"] (https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP-transport-connection-management.png)
 
 ##### TCP four waves to release the connection
 
-! [UDP message] (https://raw.githubusercontent.com/huihut/interview/master/images/TCP four waves to release the connection.png)
+! [UDP message] (https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP four waves to release the connection.png)
 
 [Explain the whole process of TCP release connection]
 
@@ -2296,7 +2298,7 @@ TCP congestion control diagram
 
 TCP finite state machine picture
 
-! [TCP's finite state machine] (https://raw.githubusercontent.com/huihut/interview/master/images/TCP's finite state machine.png)
+! [TCP's finite state machine] (https://raw.githubusercontent.com/mihir3445/interview/master/images/TCP's finite state machine.png)
 
 ### Application layer
 
@@ -2305,7 +2307,7 @@ TCP finite state machine picture
 * DNS (Domain Name System) is a service of the Internet. It serves as a distributed database that maps domain names and IP addresses to each other, enabling people to access the Internet more conveniently. DNS uses TCP and UDP port 53. Currently, the limit for the length of each domain name is 63 characters, and the total length of the domain name cannot exceed 253 characters.
 
 domain name:
-* `Domain name :: = {<third-level domain name>. <Second-level domain name>. <Top-level domain name>}`, for example: `blog.huihut.com`
+* `Domain name :: = {<third-level domain name>. <Second-level domain name>. <Top-level domain name>}`, for example: `blog.mihir3445.com`
 
 #### FTP
 
@@ -2338,7 +2340,7 @@ Complete format:
 * `Protocol type: [// [Credential information required to access resources @] server address [: port number]] [/ resource level UNIX file path] file name [? Query] [# 段 ID]`
 
 > Among them [access credential information @ ;: port number ;? query; #fragment ID] are all optional items
-> For example: `https: // github.com / huihut / interview # cc`
+> For example: `https: // github.com / mihir3445 / interview # cc`
 
 ##### HTTP
 
@@ -2385,21 +2387,21 @@ Status code (Status-Code)
     * Used by internal network administrators as a means of central management of all computers
 * SNMP (Simple Network Management Protocol) constitutes a part of the Internet protocol family defined by the Internet Engineering Task Force (IETF). The protocol can support a network management system to monitor whether the devices connected to the network have any management concerns.
 
-## 🌩 Network programming
+## � Network programming
 
 ### Socket
 
 > [Linux Socket programming (not limited to Linux)] (https://www.cnblogs.com/skynet/archive/2010/12/12/1903949.html)
 
-! [Socket client server communication] (https://raw.githubusercontent.com/huihut/interview/master/images/socket client server communication.jpg)
+! [Socket client server communication] (https://raw.githubusercontent.com/mihir3445/interview/master/images/socket client server communication.jpg)
 
 
 #### Socket read () and write () functions
 
-`` `cpp
+```cpp
 ssize_t read (int fd, void * buf, size_t count);
 ssize_t write (int fd, const void * buf, size_t count);
-`` `
+```
 
 ##### read ()
 
@@ -2450,7 +2452,7 @@ The illustrated process is as follows:
 
 So there is a FIN and ACK in each direction.
 
-## 💾 Database
+## � Database
 
 > Some knowledge points in this section come from "Introduction to Database System (5th Edition)"
 
@@ -2575,7 +2577,7 @@ So there is a FIN and ACK in each direction.
         * Cancellation: Undo the transaction with the lowest deadlock cost and release all the locks of this transaction, so that other transactions can continue to run.
 * Serializable scheduling: The concurrent execution of multiple transactions is correct if and only if the result is the same as when these transactions are executed serially in a certain order. Criteria for correct scheduling of concurrent transactions in serializability.
 
-## 📏 Design pattern
+## � Design pattern
 
 > Examples of major design patterns: [CSDN column. C ++ design patterns] (https://blog.csdn.net/liang19890820/article/details/66974516) series of blog posts
 
@@ -2749,18 +2751,18 @@ Create a shared library named MySharedLib
 
 CMakeLists.txt
 
-`` `cmake
+```cmake
 cmake_minimum_required (VERSION 3.10)
 project (MySharedLib)
 
 set (CMAKE_CXX_STANDARD 11)
 
 add_library (MySharedLib SHARED library.cpp library.h)
-`` `
+```
 
 library.h
 
-`` `cpp
+```cpp
 #ifndef MYSHAREDLIB_LIBRARY_H
 #define MYSHAREDLIB_LIBRARY_H
 
@@ -2780,18 +2782,18 @@ T sum (T first, Types ... rest)
 }
 
 #endif
-`` `
+```
 
 library.cpp
 
-`` `cpp
+```cpp
 #include <iostream>
 #include "library.h"
 
 void hello () {
     std :: cout << "Hello, World!" << std :: endl;
 }
-`` `
+```
 
 #### use of so shared library (called by executable project)
 
@@ -2801,7 +2803,7 @@ Create an executable project named TestSharedLib
 
 CMakeLists.txt
 
-`` `cmake
+```cmake
 cmake_minimum_required (VERSION 3.10)
 project (TestSharedLib)
 
@@ -2821,11 +2823,11 @@ add_executable (TestSharedLib main.cpp)
 
 # Link to MySharedLib library
 target_link_libraries (TestSharedLib MySharedLib)
-`` `
+```
 
 main.cpp
 
-`` `cpp
+```cpp
 #include <iostream>
 #include "library.h"
 using std :: cout;
@@ -2839,15 +2841,15 @@ int main () {
 
     return 0;
 }
-`` `
+```
 
 Results of the
 
-`` `
+```
 Hello, World!
 1 + 2 = 3
 1 + 2 + 3 = 6
-`` `
+```
 
 ### Windows application entry function
 
@@ -2856,7 +2858,7 @@ Hello, World!
 
 _tWinMain and _tmain function declaration
 
-`` `cpp
+```cpp
 Int WINAPI _tWinMain (
     HINSTANCE hInstanceExe,
     HINSTANCE,
@@ -2867,7 +2869,7 @@ int _tmain (
     int argc,
     TCHAR * argv [],
     TCHAR * envp []);
-`` `
+```
 
 Application type | Entry point function | Startup function embedded in executable file
 --- | --- | ---
@@ -2913,7 +2915,7 @@ Dynamic Link Library (Dynamic-Link Library) | DllMain | _DllMainCRTStartup
 
 DllMain function
 
-`` `cpp
+```cpp
 BOOL WINAPI DllMain (HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved)
 {
     switch (fdwReason)
@@ -2937,7 +2939,7 @@ BOOL WINAPI DllMain (HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved)
     }
     return (TRUE); // Used only for DLL_PROCESS_ATTACH
 }
-`` `
+```
 
 #### 载入卸载库
 
@@ -2994,11 +2996,11 @@ LoadLibrary 与 FreeLibrary 流程图
 
 ##### LoadLibrary
 
-![WindowsLoadLibrary](https://raw.githubusercontent.com/huihut/interview/master/images/WindowsLoadLibrary.png)
+![WindowsLoadLibrary](https://raw.githubusercontent.com/mihir3445/interview/master/images/WindowsLoadLibrary.png)
 
 ##### FreeLibrary
 
-![WindowsFreeLibrary](https://raw.githubusercontent.com/huihut/interview/master/images/WindowsFreeLibrary.png)
+![WindowsFreeLibrary](https://raw.githubusercontent.com/mihir3445/interview/master/images/WindowsFreeLibrary.png)
 
 #### DLL 库的编写（导出一个 DLL 模块）
 
@@ -3160,9 +3162,9 @@ contain:
 * Variable length parameter (stdarg.h)
 * Non-local jump (setjmp.h)
 
-## 📚 Books
+## � Books
 
-> [huihut / CS-Books] (https://github.com/huihut/CS-Books): 📚 Computer Science Books Computer Technology Books PDF
+> [mihir3445 / CS-Books] (https://github.com/mihir3445/CS-Books): � Computer Science Books Computer Technology Books PDF
 
 ### Language
 
@@ -3194,7 +3196,7 @@ contain:
 
 * "Self-cultivation of programmers"
 
-## 🔱 C / C ++ development direction
+## � C / C ++ development direction
 
 > The development direction of C / C ++ is very broad, including but not limited to the following directions. Here are some requirements for recruiting positions in large factories.
 
@@ -3280,7 +3282,7 @@ contain:
 * Strong algorithm implementation ability, proficient in C / C ++ programming, familiar with Shell / Python / Matlab at least one programming language;
 * Papers published in academic conferences or journals such as computer vision, pattern recognition, related international competition awards, and related patents are preferred.
 
-## 💯 Review brush question website
+## � Review brush question website
 
 * [cplusplus] (http://www.cplusplus.com/)
 * [cppreference] (https://zh.cppreference.com/w/%E9%A6%96%E9%A1%B5)
@@ -3289,7 +3291,7 @@ contain:
 * [lintcode] (https://www.lintcode.com/)
 * [nowcoder] (https://www.nowcoder.net/)
 
-## 📝 Interview question experience
+## � Interview question experience
 
 * [Niu Ke.. 2020 Autumn Recruitment Noodles Summary! (Post division)] (https://www.nowcoder.com/discuss/205497)
 * [Niuke.com] [Preparation for Autumn Tricks] Strategy for 2020 Autumn Tricks] (https://www.nowcoder.com/discuss/197116)
@@ -3310,28 +3312,28 @@ contain:
 * [cnblogs. Summary of common C ++ interview questions and basic knowledge points (1)] (https://www.cnblogs.com/LUO77/p/5771237.html)
 * [segmentfault. Summary of common interview questions in C ++] (https://segmentfault.com/a/1190000003745529)
 
-## 📆 Recruiting time posts
+## � Recruiting time posts
 
 * [Niuke.com 2020 School Recruitment | 2020 IT Enterprise Recruitment Schedule] (https://www.nowcoder.com/school/schedule)
 
-## 👍 Recommend
+## � Recommend
 
-* [Github. CyC2018 / Job-Recommend] (https://github.com/CyC2018/Job-Recommend): 🔎 Internet internal push information (social recruitment, school recruitment, internship)
+* [Github. CyC2018 / Job-Recommend] (https://github.com/CyC2018/Job-Recommend): � Internet internal push information (social recruitment, school recruitment, internship)
 * [Github. Amusi / AI-Job-Recommend] (https://github.com/amusi/AI-Job-Recommend): direction of artificial intelligence of domestic companies (including machine learning, deep learning, computer vision and natural language processing) Job recruitment information (including full-time, internship and school recruitment)
 
-## 👬 Contributors
+## � Contributors
 
 Including Issues and PRs for errata, sorted according to contribution time.
 
 [tamarous] (https://github.com/tamarous), [i0Ek3] (https://github.com/i0Ek3), [sniper00] (https://github.com/sniper00), [blackhorse001] (https : //github.com/blackhorse001), [houbaron] (https://github.com/houbaron), [Qouan] (https://github.com/Qouan), [2329408386] (https://github.com com / 2329408386), [FlyingfishMORE] (https://github.com/FlyingfishMORE), [Ematrix163] (https://github.com/Ematrix163), [ReturnZero23] (https://github.com/ReturnZero23), [kelvinkuo] (https://github.com/kelvinkuo), [henryace] (https://github.com/henryace), [xinghun] (https://github.com/xinghun), [maokelong] (https : //github.com/maokelong), [easyYao] (https://github.com/easyYao), [FengZiYjun] (https://github.com/FengZiYjun), [shangjiaxuan] (https://github.com com / shangjiaxuan), [kwongtailau] (https://github.com/kwongtailau), [asky991] (https://github.com/asky991), [traviszeng] (https://github.com/traviszeng), [kele1997] (https://github.com/kele1997), [hxdnshx] (https://github.com/hxdnshx), [a74731248] (https://github.com/a 74731248), [qvjp] (https://github.com/qvjp), [xindelvcheng] (https://github.com/xindelvcheng), [hbsun2113] (https://github.com/hbsun2113), [linkwk7 ] (https://github.com/linkwk7), [foolishflyfox] (https://github.com/foolishflyfox), [zhjp0] (https://github.com/zhjp0), [Mrtj2016] (https: / /github.com/Mrtj2016)
 
-## 🍭 Support sponsorship
+## � Support sponsorship
 
 Reward me for a pack of spicy strips ~
 
 ! [Huihut-AliPay] (https://huihut-img.oss-cn-shenzhen.aliyuncs.com/Huihut-AliPay-H370.png)! [Huihut-WeChatPay] (https: //huihut-img.oss- cn-shenzhen.aliyuncs.com/Huihut-WeChatPay-H370.png)
 
-## 📜 License
+## � License
 
 This warehouse follows the CC BY-NC-SA 4.0 (signed-non-commercial use-sharing in the same way) agreement, please indicate the source for reprinting, and may not be used for commercial purposes.
 
